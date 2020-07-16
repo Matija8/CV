@@ -1,0 +1,150 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}			% possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}								% style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               	% color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         	% to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  	% uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       	% if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              	% if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                	% if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           	% for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+%\usepackage{hyperref}
+
+% personal data
+\name{Matija}{Miličević}
+\title{Programer}
+\address{Beograd, Srbija}							% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+381 64 992 5146}                   	% optional, remove / comment the line if not wanted
+%\phone[fixed]{+2~(345)~678~901}					% optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{matijanme@gmail.com}                        	% optional, remove / comment the line if not wanted
+%\homepage{https://github.com/Matija8}              % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+\photo[64pt][0.4pt]{Pic.jpg}                       	% optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+
+\section{Obrazovanje}
+
+\cventry{2015--}{Informatika}{Matematički fakultet}{Beograd}{\textit{prosek 7.51}}{Četvrta godina osnovnih studija}
+
+\cventry{2011--2014}{Srednja škola}{Deveta gimnazija ``Mihailo Petrović Alas''}{Beograd}{\textit{prosek 4.40}}{Prirodno-matematički smer}
+
+
+\section{Projekti}
+
+
+\cvlistitem{\textbf{Mejl klijent i server (jun 2020.)} - Projekat u sklopu kursa Programiranje za veb. U timu sa 4 kolege radio na implementiranju gmail klona. Korišćene tehnologije na klijentu su Angular 9, RxJS i Angular Material. Na serveru su korišćenji Node.js (TypeScript), a za bazu je korišćen postgres sa TypeORM-om. Uloga u timu je bila sinhronizacija poruka putem RxJS-a i opšte programiranje.(\href{https://github.com/Matija8/Post.ar}{link}).}
+
+\cvlistitem{\textbf{Turn based video igra (februar 2020.)} - Projekat u sklopu kursa Razvoj softvera implementiran u C++ sa Qt5 bibliotekom. Igrači pomeraju svoje jedinice na tabli i napadaju protivničke(\href{https://github.com/Matija8/Tactical-turn-based-game}{link}).}
+
+\cvlistitem{\textbf{Minesweeper (januar 2020.)} - Projekat u sklopu stručnog kursa Programski jezik JavaScript firme Levi9. Projekat je iz 3 dela: 1) Igrica (minesweeper) u JS-u; 2) Node.js server + MongoDB za čuvanje rekorda (highscore); 3) React aplikacija za prikaz rekorda.(\href{https://github.com/Matija8/Js-Minesweeper}{link}).}
+
+\cvlistitem{\textbf{Šutiranje slobodnih bacanja (maj 2019.)} - Projekat u sklopu kursa Osnove matematičkog modeliranja. U timu sa koleginicom napisan rad o računanju optimalnog ugla šuta u odnosu na visinu košarkaša. Računanje ugla implementirano korišćenjem jezika Python pomoću NumPy biblioteke(\href{https://github.com/Matija8/Slobodna-bacanja-Latex-}{link}).}
+
+\cvlistitem{\textbf{Sidescroller video igra (januar 2018.)} - Projekat u jeziku C u sklopu kursa Računarska grafika na trećoj godini Matematičkog fakulteta. Cilj igre je skakanjem po platformama doći do cilja. Korišćenje biblioteke OpenGL(\href{https://github.com/Matija8/Sidescrolling-platform-video-game}{link}).}
+
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+
+
+
+\section{Programski jezici}
+
+\cvdoubleitem
+{C++}{
+\begin{itemize}
+	\item STL
+\end{itemize}
+}
+{Java}{
+\begin{itemize}
+	\item OOP koncepti
+	%\item JavaFX
+\end{itemize}
+}
+
+\cvdoubleitem
+{JavaScript}{
+\begin{itemize}
+	\item ES6, TypeScript
+	\item Angular, RxJS
+	\item Node.js, Express.js
+	%\item MongoDB
+\end{itemize}}
+{Python}{
+\begin{itemize}
+	\item NumPy
+	\item Matplotlib
+\end{itemize}
+}
+
+\cvdoubleitem
+{SQL}{
+\begin{itemize}
+	\item Relacione baze
+\end{itemize}
+}
+{C\#}{
+\begin{itemize}
+	\item .Net osnove
+\end{itemize}
+}
+
+%\cvdoubleitem
+%{Matlab}{
+%\begin{itemize}
+%	\item Numerička izračunavanja
+%\end{itemize}
+%}
+%{R}{
+%\begin{itemize}
+%	\item Osnovne primene
+%\end{itemize}
+%}
+
+\section{Tehnologije}
+\cvlistitem{Git softver za verzionisanje}
+\cvlistitem{Linux i Windows operativni sistemi}
+\cvlistitem{IntelliJ IDEA, Visual Studio Code i Qt Creator integrisana razvojna okruženja}
+\cvlistitem{Docker, Docker Compose}
+
+\section{Jezici}
+\cvitem{Srpski}{Maternji jezik}
+\cvitem{Engleski}{Odlično poznavanje jezika}
+
+\end{document}
+
+%% end of file `template.tex'.
