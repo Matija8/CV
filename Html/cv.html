@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      :root {
+        --c-blue: rgb(50, 50, 240);
+      }
+
+      .A4 {
+        min-width: 210mm;
+        /* min-height: 1vh; */
+        min-height: 297mm;
+        max-height: 297mm;
+      }
+      .flex-col {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .flex-item-float-right {
+        margin-left: auto;
+        order: 2;
+      }
+    </style>
+  </head>
+
+  <body style="display: flex; justify-content: center; height: 100%">
+    <div class="A4" style="border: 1px solid black">
+      <header style="display: flex; margin-top: 1rem">
+        <div class="flex-col" style="margin-left: 5rem; align-items: center">
+          <h1>Matija Miličević</h1>
+          <h3 style="font-weight: 600; color: gray; font-style: italic">
+            Software Engineer
+          </h3>
+        </div>
+
+        <div
+          class="flex-item-float-right"
+          style="margin-right: 5rem; display: flex; align-items: flex-end"
+        >
+          <nav class="flex-col">
+            <address>Belgrade, Serbia</address>
+            <span>
+              phone:
+              <a href="tel:+381 64 992 5146">+381 64 992 5146</a>
+            </span>
+            <span>
+              email:
+              <a href="mailto: matijanme@gmail.com">matijanme@gmail.com</a>
+            </span>
+          </nav>
+          <img
+            src="../Pic.jpg"
+            alt="Avatar"
+            style="
+              width: 120px;
+              padding: 3px;
+              border-radius: 15%;
+              border: solid 1px var(--c-blue);
+            "
+          />
+        </div>
+      </header>
+
+      <main></main>
+    </div>
+  </body>
+</html>
