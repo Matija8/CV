@@ -7,6 +7,7 @@
 
 
 \documentclass[11pt,a4paper,sans]{moderncv}			% possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+%\documentclass[11pt, a4paper]{awesome-cv}
 
 % moderncv themes
 \moderncvstyle{classic}								% style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
@@ -27,7 +28,7 @@
 
 % personal data
 \name{Matija}{Miličević}
-\title{Programer}
+\title{Software Engineer}
 \address{Belgrade, Serbia}							% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 \phone[mobile]{+381 64 992 5146}                   	% optional, remove / comment the line if not wanted
 %\phone[fixed]{+2~(345)~678~901}					% optional, remove / comment the line if not wanted
@@ -55,22 +56,24 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
+\section{Work Experience}
+
+\cventry{Apr 2021 --}{Junior Software Engineer}{InsideMaps Inc}{Belgrade, Serbia}{}{Full stack web development, working on a React, AngularJS, Node.js, AWS, Typescript and MongoDB based infrastructure. Developing and maintaining features inside internal tools. Responsible for maintaining logging and profiling logic inside these tools.}
+
+
+\cventry{Oct 2020 -- Apr 2021}{Software Engineer Intern}{Microsoft}{Belgrade, Serbia}{}{With the help of a mentor, added new functionality to C++/C\# microservices used by Microsoft PowerPoint.}
+
 
 \section{Education}
 
-\cventry{2015--}{Informatics}{Faculty of Mathematics}{University of Belgrade}{}{Fourth year bachelor studies}
-
-\cventry{2011--2014}{High school}{Ninth Gymnasium ``Mihailo Petrović Alas''}{Belgrade}{}{Natural sciences and mathematics course}
-
+\cventry{2015 --}{BSc in Informatics}{Faculty of Mathematics}{University of Belgrade}{}{}
 
 \section{Projects}
 
 
-\cvlistitem{\textbf{Mail client and server (June 2020.)} - Web programming course project. In a team with 4 colleagues worked on implementing a gmail clone. Technologies used on the client were Angular 9, RxJS and Angular Material. Node.js and postgres with TypeORM were used on the server. Team role was to synchronize message streams and do general client side programming(\href{https://github.com/Matija8/Post.ar}{link}).}
+\cvlistitem{\textbf{Mail client and server (June 2020.)} - Implemented a gmail clone in a team with 4 colleagues. Team role was to lead the front end part of the team, synchronize message streams and do general client side programming. Technologies used on the client were Angular 9, RxJS and Angular Material. Node.js and postgres with TypeORM were used on the server(\href{https://github.com/Matija8/Post.ar}{link}).}
 
-\cvlistitem{\textbf{Turn based video game (February 2020.)} - Software development course project. Written in C++, also using the Qt5 GUI library. Players move their units on the board, with the objective being to eliminate all their opponents units(\href{https://github.com/Matija8/Tactical-turn-based-game}{link}).}
-
-\cvlistitem{\textbf{Minesweeper (January 2020.)} - Project for the Levi9 JavaScript course. Project consists of 3 parts: 1) Vanilla JS video game (minesweeper); 2) Node.js server + MongoDB for storing highscores; 3) React SPA leaderboard for displaying highscores(\href{https://github.com/Matija8/Js-Minesweeper}{link}).}
+\cvlistitem{\textbf{Minesweeper (January 2020.)} - Project for a JavaScript course held by the Levi9 company. Project consists of 3 parts: 1) Vanilla JS video game (minesweeper); 2) Node.js + MongoDB server for storing high scores; 3) React SPA leaderboard for displaying the high scores(\href{https://github.com/Matija8/Js-Minesweeper}{link}).}
 
 \cvlistitem{\textbf{Free throw shooting (May 2019.)} - Mathematical modeling course project. In a team with a colleague written a paper on calculating the optimal shot angle in relation to the height of the free throw shooter. Angle calculation was implemented using Python and the NumPy library(\href{https://github.com/Matija8/Slobodna-bacanja-Latex-}{link}).}
 
@@ -81,7 +84,7 @@
 
 
 
-\section{Programming languages}
+\section{Skills}
 
 \cvdoubleitem
 {C++}{
@@ -98,7 +101,7 @@
 \cvdoubleitem
 {JavaScript}{
 \begin{itemize}
-	\item ES6, TypeScript
+	\item ES6, React, TypeScript
 	\item Angular, RxJS
 	\item Node.js, Express.js
 \end{itemize}}
