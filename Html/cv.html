@@ -15,8 +15,8 @@
       body {
         padding: 0;
         margin: 0;
-        /* height: min(297mm, 100vh); */
-        height: 297mm;
+        height: min(297mm, 100vh);
+        /* height: 297mm; */
       }
 
       .A4 {
@@ -64,9 +64,16 @@
         margin-top: 1rem;
       }
 
+      .work-exp-icon-container {
+        width: 40px;
+        height: 40px;
+        display: grid;
+        place-items: center start;
+      }
+
       .work-exp-icon {
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
         background-size: contain;
         background-repeat: no-repeat;
         /* border: solid 1px; */
@@ -153,51 +160,61 @@
       <main class="lr-padded-1">
         <section id="work-experience">
           <h2>Work Experience</h2>
-          <div class="work-exp-header">
-            <div
-              class="work-exp-icon"
-              style="
-                background-image: url('./assets/im.jpg');
-                /* width: 50px;
-                height: 50px; */
-              "
-            ></div>
-            <h3>Junior Software Engineer</h3>
-          </div>
-          <div class="work-exp-body">
-            <div class="work-exp-left">
-              <a href="https://www.insidemaps.com/">InsideMaps Inc</a>
-              <p>Apr 2021 - Feb 2022</p>
-              <p>Belgrade, Serbia</p>
+          <article>
+            <div class="work-exp-header">
+              <div class="work-exp-icon-container">
+                <div
+                  class="work-exp-icon"
+                  style="
+                    background-image: url('./assets/im.jpg');
+                    /* width: 50px;
+                  height: 50px; */
+                  "
+                ></div>
+              </div>
+              <h3>Junior Software Engineer</h3>
             </div>
-            <p class="work-exp-right">
-              Full stack web development, working on a React, AngularJS (yes,
-              the old one), Node.js, AWS, Typescript and MongoDB based
-              infrastructure. Developing and maintaining features for internal
-              tools. Responsible for maintaining logging and profiling logic
-              inside these tools. Working in an agile team with 2 week sprints.
-            </p>
-          </div>
-          <div class="work-exp-header">
-            <div
-              class="work-exp-icon"
-              style="background-image: url('./assets/ms.png')"
-            ></div>
-            <h3>Software Engineer Intern</h3>
-          </div>
-          <div class="work-exp-body">
-            <div class="work-exp-left">
-              <a href="https://www.microsoft.com/en-rs/mdcs">Microsoft</a>
-              <p>Oct 2020 - Apr 2021</p>
-              <p>Belgrade, Serbia</p>
+            <div class="work-exp-body">
+              <div class="work-exp-left">
+                <a href="https://www.insidemaps.com/">InsideMaps Inc</a>
+                <p>Apr 2021 - Feb 2022</p>
+                <p>Belgrade, Serbia</p>
+              </div>
+              <p class="work-exp-right">
+                Full stack web development, working on a React, AngularJS (yes,
+                the old one), Node.js, AWS, Typescript and MongoDB based
+                infrastructure. Developing and maintaining features for internal
+                tools. Responsible for maintaining logging and profiling logic
+                inside these tools. Working in an agile team with 2 week
+                sprints.
+              </p>
             </div>
-            <p class="work-exp-right">
-              With the help of a mentor, added new functionality to C++/C# based
-              microservices used in production by Microsoft PowerPoint.
-              Communicated and adapted design decisions with colleagues from
-              Sunnyvale, CA.
-            </p>
-          </div>
+          </article>
+
+          <article>
+            <div class="work-exp-header">
+              <div class="work-exp-icon-container">
+                <div
+                  class="work-exp-icon"
+                  style="background-image: url('./assets/ms.png'); height: 30px"
+                ></div>
+              </div>
+              <h3>Software Engineer Intern</h3>
+            </div>
+            <div class="work-exp-body">
+              <div class="work-exp-left">
+                <a href="https://www.microsoft.com/en-rs/mdcs">Microsoft</a>
+                <p>Oct 2020 - Apr 2021</p>
+                <p>Belgrade, Serbia</p>
+              </div>
+              <p class="work-exp-right">
+                With the help of a mentor, added new functionality to C++/C#
+                based microservices used in production by Microsoft PowerPoint.
+                Communicated and adapted design decisions with colleagues from
+                Sunnyvale, CA.
+              </p>
+            </div>
+          </article>
         </section>
 
         <section>
