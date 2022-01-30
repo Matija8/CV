@@ -8,7 +8,7 @@
 
     <style>
       :root {
-        --c-blue: rgb(50, 50, 240);
+        --color-blue-1: rgb(50, 50, 240);
         font-size: 11pt;
       }
 
@@ -27,6 +27,17 @@
       .flex-col {
         display: flex;
         flex-direction: column;
+      }
+
+      .flex-center-align {
+        display: flex;
+        align-items: center;
+      }
+
+      .icon-1 {
+        height: 20px;
+        color: red;
+        /* background-color: grey; */
       }
 
       .lr-padded-1 {
@@ -61,17 +72,27 @@
           class="flex-item-float-right"
           style="display: flex; align-items: flex-end; gap: 0.5rem"
         >
-          <nav class="flex-col">
-            <address>Belgrade, Serbia</address>
-            <span>
-              phone:
+          <address class="flex-col">
+            <i>Belgrade, Serbia</i>
+            <span class="flex-center-align">
+              <img src="./assets/github.svg" alt="github" class="icon-1" />:
+              <a href="https://github.com/Matija8">github.com/Matija8</a>
+            </span>
+            <span class="flex-center-align">
+              <img src="./assets/linkedin.svg" alt="linkedin" class="icon-1" />:
+              <a href="https://www.linkedin.com/in/matija-milicevic/"
+                >linkedin.com/in/matija-milicevic</a
+              >
+            </span>
+            <span class="flex-center-align">
+              <img src="./assets/cellphone.svg" alt="phone" class="icon-1" />:
               <a href="tel:+381 64 992 5146">+381 64 992 5146</a>
             </span>
-            <span>
-              email:
+            <span class="flex-center-align">
+              <img src="./assets/email.svg" alt="email" class="icon-1" />:
               <a href="mailto: matijanme@gmail.com">matijanme@gmail.com</a>
             </span>
-          </nav>
+          </address>
           <img
             src="../Pic.jpg"
             alt="Avatar"
@@ -79,7 +100,7 @@
               height: 120px;
               padding: 3px;
               border-radius: 15%;
-              border: solid 1px var(--c-blue);
+              border: solid 1px var(--color-blue-1);
             "
           />
         </div>
