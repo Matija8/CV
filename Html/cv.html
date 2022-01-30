@@ -102,6 +102,10 @@
         margin-top: 0;
         margin-bottom: 0;
       }
+
+      #section-projects {
+        /* display: none; */
+      }
     </style>
   </head>
 
@@ -219,13 +223,39 @@
 
         <section>
           <h2>Education</h2>
-          <p class="margin-left-1">
-            \cventry{2015 --}{BSc in Informatics}{Faculty of
-            Mathematics}{University of Belgrade}{}{}
-          </p>
+
+          <article style="display: flex; gap: 1rem; align-items: center">
+            <div class="work-exp-header" style="margin: 0">
+              <div class="work-exp-icon-container">
+                <div
+                  class="work-exp-icon"
+                  style="
+                    background-image: url('./assets/matf.gif');
+                    height: 30px;
+                  "
+                ></div>
+              </div>
+              <h3>Bachelor of informatics</h3>
+            </div>
+            <div>
+              <div>
+                <a href="https://www.bg.ac.rs/en/">University of Belgrade</a>
+              </div>
+              <div>
+                <a href="http://www.matf.bg.ac.rs/eng/">
+                  Faculty of Mathematics</a
+                >
+              </div>
+            </div>
+
+            <div>
+              <p class="margin-0">2015 - TBC</p>
+              <p class="margin-0">Belgrade, Serbia</p>
+            </div>
+          </article>
         </section>
 
-        <section>
+        <section id="section-projects">
           <h2>Projects</h2>
 
           <p class="margin-left-1">
@@ -235,7 +265,7 @@
             side programming. Technologies used on the client were Angular 9,
             RxJS and Angular Material. Node.js and postgres with TypeORM were
             used on the server (<a href="https://github.com/Matija8/Post.ar"
-              >link</a
+              >repo</a
             >).
           </p>
 
@@ -244,7 +274,7 @@
             by the Levi9 company. Project consists of 3 parts: 1) Vanilla JS
             video game (minesweeper); 2) Node.js + MongoDB server for storing
             high scores; 3) React SPA leaderboard for displaying the high scores
-            (<a href="https://github.com/Matija8/Js-Minesweeper">link</a>).
+            (<a href="https://github.com/Matija8/Js-Minesweeper">repo</a>).
           </p>
 
           <!-- <p class="margin-left-1">
@@ -254,7 +284,7 @@
             shooter. Angle calculation was implemented using Python and the
             NumPy library (<a
               href="https://github.com/Matija8/Slobodna-bacanja-Latex-"
-              >link)</a
+              >repo)</a
             >.
           </p> -->
 
@@ -263,8 +293,8 @@
             course project. Written in C++, using OpenGL for graphics rendering.
             The goal of the game is to reach the last platform(<a
               href="https://github.com/Matija8/Sidescrolling-platform-video-game"
-              >link</a
-            >.}
+              >repo</a
+            >).
           </p>
         </section>
 
