@@ -25,6 +25,10 @@
         border: 1px solid black;
       }
 
+      .flex {
+        display: flex;
+      }
+
       .flex-col {
         display: flex;
         flex-direction: column;
@@ -60,16 +64,30 @@
         margin-top: 1rem;
       }
 
-      .work-exp-icon-container {
-        width: 50px;
-        height: 50px;
-        /* border: 1px solid; */
+      .work-exp-icon {
+        width: 35px;
+        height: 35px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        /* border: solid 1px; */
       }
 
-      .work-exp-icon {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
+      .work-exp-body {
+        display: flex;
+        margin-left: 2rem;
+        /* border: solid red; */
+        gap: 0.5rem;
+      }
+
+      .work-exp-left {
+        width: 10rem;
+        flex-shrink: 0;
+        flex-grow: 0;
+        /* border: solid yellow; */
+      }
+
+      .work-exp-right {
+        /* display: none; */
       }
 
       #work-experience p,
@@ -136,20 +154,23 @@
         <section id="work-experience">
           <h2>Work Experience</h2>
           <div class="work-exp-header">
-            <div class="work-exp-icon-container">
-              <img
-                src="./assets/im.jpg"
-                class="work-exp-icon"
-                style="height: 60px"
-              />
-            </div>
+            <div
+              class="work-exp-icon"
+              style="
+                background-image: url('./assets/im.jpg');
+                /* width: 50px;
+                height: 50px; */
+              "
+            ></div>
             <h3>Junior Software Engineer</h3>
           </div>
-          <div class="margin-left-1">
-            <p style="font-size: 1.2em">InsideMaps Inc</p>
-            <p style="font-size: 1.1em">Apr 2021 - Feb 2022</p>
-            <p style="font-size: 1.1em">Belgrade, Serbia</p>
-            <p class="margin-left-1">
+          <div class="work-exp-body">
+            <div class="work-exp-left">
+              <a href="https://www.insidemaps.com/">InsideMaps Inc</a>
+              <p>Apr 2021 - Feb 2022</p>
+              <p>Belgrade, Serbia</p>
+            </div>
+            <p class="work-exp-right">
               Full stack web development, working on a React, AngularJS (yes,
               the old one), Node.js, AWS, Typescript and MongoDB based
               infrastructure. Developing and maintaining features for internal
@@ -158,20 +179,19 @@
             </p>
           </div>
           <div class="work-exp-header">
-            <div class="work-exp-icon-container">
-              <img
-                src="./assets/ms.png"
-                class="work-exp-icon"
-                style="height: 32px"
-              />
-            </div>
+            <div
+              class="work-exp-icon"
+              style="background-image: url('./assets/ms.png')"
+            ></div>
             <h3>Software Engineer Intern</h3>
           </div>
-          <div class="margin-left-1">
-            <p style="font-size: 1.2em">Microsoft</p>
-            <p style="font-size: 1.1em">Oct 2020 - Apr 2021</p>
-            <p style="font-size: 1.1em">Belgrade, Serbia</p>
-            <p class="margin-left-1">
+          <div class="work-exp-body">
+            <div class="work-exp-left">
+              <a href="https://www.microsoft.com/en-rs/mdcs">Microsoft</a>
+              <p>Oct 2020 - Apr 2021</p>
+              <p>Belgrade, Serbia</p>
+            </div>
+            <p class="work-exp-right">
               With the help of a mentor, added new functionality to C++/C# based
               microservices used in production by Microsoft PowerPoint.
               Communicated and adapted design decisions with colleagues from
