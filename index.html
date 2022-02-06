@@ -65,6 +65,10 @@
         margin-left: 2rem;
       }
 
+      .work-exp-whole-item {
+        margin-left: 2rem;
+      }
+
       .work-exp-header {
         display: flex;
         align-items: center;
@@ -84,24 +88,21 @@
         height: 40px;
         background-size: contain;
         background-repeat: no-repeat;
-        /* border: solid 1px; */
       }
 
       .work-exp-body {
         display: flex;
-        margin-left: 2rem;
-        /* border: solid red; */
         gap: 0.5rem;
       }
 
-      .work-exp-left {
-        width: 10rem;
+      .work-exp-body-left {
+        width: 12rem;
         flex-shrink: 0;
         flex-grow: 0;
         /* border: solid yellow; */
       }
 
-      .work-exp-right {
+      .work-exp-body-right {
         /* display: none; */
       }
 
@@ -111,8 +112,17 @@
         margin-bottom: 0;
       }
 
+      .skill-ul {
+        margin: 0;
+      }
+
       #section-projects {
         /* display: none; */
+      }
+
+      .section-heading {
+        margin-top: 20;
+        margin-bottom: 0;
       }
     </style>
   </head>
@@ -136,44 +146,51 @@
           style="display: flex; align-items: flex-end; gap: 0.5rem"
         >
           <address class="flex-col">
-            <i>Belgrade, Serbia</i>
             <span class="flex-center-align">
-              <img src="./assets/github.svg" alt="github" class="icon-1" />:
+              <img
+                src="./assets/map-marker.svg"
+                alt="location"
+                class="icon-1"
+              />
+              Belgrade, Serbia
+            </span>
+            <span class="flex-center-align">
+              <img src="./assets/github.svg" alt="github" class="icon-1" />
               <a href="https://github.com/Matija8">github.com/Matija8</a>
             </span>
             <span class="flex-center-align">
-              <img src="./assets/linkedin.svg" alt="linkedin" class="icon-1" />:
+              <img src="./assets/linkedin.svg" alt="linkedin" class="icon-1" />
               <a href="https://www.linkedin.com/in/matija-milicevic/"
                 >linkedin.com/in/matija-milicevic</a
               >
             </span>
             <span class="flex-center-align">
-              <img src="./assets/cellphone.svg" alt="phone" class="icon-1" />:
+              <img src="./assets/cellphone.svg" alt="phone" class="icon-1" />
               <a href="tel:+381 64 992 5146">+381 64 992 5146</a>
             </span>
             <span class="flex-center-align">
-              <img src="./assets/email.svg" alt="email" class="icon-1" />:
+              <img src="./assets/email.svg" alt="email" class="icon-1" />
               <a href="mailto: matijanme@gmail.com">matijanme@gmail.com</a>
             </span>
           </address>
-          <img
+          <!-- <img
             src="./assets/headshot.jpg"
             alt="Avatar"
             style="
-              height: 120px;
+              height: 90px;
               padding: 3px;
-              border-radius: 15%;
-              border: solid 1px var(--color-blue-1);
+              border-radius: 10px;
+              /* border: solid 1px var(--color-blue-1); */
             "
-          />
+          /> -->
         </div>
       </header>
 
       <main class="lr-padded-1">
         <section id="work-experience">
-          <h2>Work Experience</h2>
-          <article>
-            <div class="work-exp-header">
+          <h2 class="section-heading">Work Experience</h2>
+          <article class="work-exp-whole-item">
+            <div class="work-exp-header" style="margin-top: 0.5rem">
               <div class="work-exp-icon-container">
                 <div
                   class="work-exp-icon"
@@ -187,12 +204,12 @@
               <h3>Junior Software Engineer</h3>
             </div>
             <div class="work-exp-body">
-              <div class="work-exp-left">
+              <div class="work-exp-body-left">
                 <a href="https://www.insidemaps.com/">InsideMaps Inc</a>
                 <p>Apr 2021 - Feb 2022</p>
                 <p>Belgrade, Serbia</p>
               </div>
-              <p class="work-exp-right">
+              <p class="work-exp-body-right">
                 Full stack web development, working on a React, AngularJS (yes,
                 the old one), Node.js, AWS, Typescript and MongoDB based
                 infrastructure. Developing and maintaining features for internal
@@ -203,7 +220,7 @@
             </div>
           </article>
 
-          <article>
+          <article class="work-exp-whole-item">
             <div class="work-exp-header">
               <div class="work-exp-icon-container">
                 <div
@@ -214,12 +231,12 @@
               <h3>Software Engineer Intern</h3>
             </div>
             <div class="work-exp-body">
-              <div class="work-exp-left">
+              <div class="work-exp-body-left">
                 <a href="https://www.microsoft.com/en-rs/mdcs">Microsoft</a>
                 <p>Oct 2020 - Apr 2021</p>
                 <p>Belgrade, Serbia</p>
               </div>
-              <p class="work-exp-right">
+              <p class="work-exp-body-right">
                 With the help of a mentor, added new functionality to C++/C#
                 based microservices used in production by Microsoft PowerPoint.
                 Communicated and adapted design decisions with colleagues from
@@ -230,9 +247,9 @@
         </section>
 
         <section>
-          <h2>Education</h2>
+          <h2 class="section-heading">Education</h2>
 
-          <article style="display: flex; gap: 1rem; align-items: center">
+          <article class="work-exp-whole-item">
             <div class="work-exp-header" style="margin: 0">
               <div class="work-exp-icon-container">
                 <div
@@ -245,28 +262,53 @@
               </div>
               <h3>Bachelor of informatics</h3>
             </div>
-            <div>
-              <div>
+            <div class="work-exp-body">
+              <div class="work-exp-body-left">
                 <a href="https://www.bg.ac.rs/en/">University of Belgrade</a>
-              </div>
-              <div>
                 <a href="http://www.matf.bg.ac.rs/eng/">
                   Faculty of Mathematics</a
                 >
               </div>
-            </div>
 
-            <div>
-              <p class="margin-0">2015 - TBC</p>
-              <p class="margin-0">Belgrade, Serbia</p>
+              <div>
+                <p class="margin-0">2015 - TBC</p>
+                <p class="margin-0">Belgrade, Serbia</p>
+              </div>
             </div>
           </article>
         </section>
 
-        <section id="section-projects">
-          <h2>Projects</h2>
+        <section>
+          <!-- TODO: Display grid (3 columns) -->
+          <h2 class="section-heading">Skills & Technologies</h2>
 
-          <p class="margin-left-1">
+          <div style="display: flex">
+            <ul class="flex-col skill-ul">
+              <li>ES3-ES6 JavaScript, TypeScript</li>
+              <li>MVC Frameworks - React, Angular</li>
+              <li>State Managment - RxJS, Redux</li>
+              <li>Back End - Node.js, Express.js</li>
+              <li>NoSQL - MongoDB, Elasticsearch</li>
+              <li>RDBMS - Postgres, SQL</li>
+              <li>Unit Testing - Jest</li>
+            </ul>
+
+            <ul class="flex-col skill-ul">
+              <li>C++ - STL, Qt5</li>
+              <li>Scripting - Python, Bash</li>
+              <li>Java 11</li>
+              <li>VCS - Git, Github/lab, SourceDepot</li>
+              <li>Design Patterns</li>
+              <li>Agile Development</li>
+              <li>Communication</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="section-projects">
+          <h2 class="section-heading">Projects</h2>
+
+          <p class="margin-left-1" style="margin-top: 0.5rem">
             <b>Mail client and server (Jun 2020)</b> - Implemented a gmail clone
             in a team with 4 colleagues. Team role was to lead the front end
             part of the team, synchronize message streams and do general client
@@ -304,32 +346,6 @@
               >repo</a
             >).
           </p>
-        </section>
-
-        <section>
-          <h2>Skills & Technologies</h2>
-
-          <div style="display: flex">
-            <ul class="flex-col">
-              <li>ES3-ES6 JavaScript, TypeScript</li>
-              <li>MVC Frameworks - React, Angular</li>
-              <li>State Managment - RxJS, Redux</li>
-              <li>Back End - Node.js, Express.js</li>
-              <li>NoSQL - MongoDB, Elasticsearch</li>
-              <li>RDBMS - Postgres, SQL</li>
-              <li>Unit Testing - Jest</li>
-            </ul>
-
-            <ul class="flex-col">
-              <li>C++ - STL, Qt5</li>
-              <li>Scripting - Python, Bash</li>
-              <li>Java 11</li>
-              <li>VCS - Git, Github/lab, SourceDepot</li>
-              <li>Design Patterns</li>
-              <li>Agile Development</li>
-              <li>Communication</li>
-            </ul>
-          </div>
         </section>
       </main>
     </div>
