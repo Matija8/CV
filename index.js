@@ -3,6 +3,10 @@ console.log('Cv js works!');
 const workExpTemplate = document.querySelector('[data-work-exp-item]');
 const workExpItemsList = document.querySelector('#work-experience');
 
+const locations = {
+  belgrade: 'Belgrade, Serbia',
+};
+
 function cardQueryGet(card, query) {
   return card.querySelector(query);
 }
@@ -17,13 +21,14 @@ function setCardQueryText(card, query, text) {
 
 console.log(workExpTemplate);
 function makeWorkExpItem({
+  companyTitle,
   title,
   bodyRight,
   duration,
   location,
-  companyTitle,
   companyHref,
   companyLogo,
+  companyLogoStyle,
 }) {
   const card = workExpTemplate.content.cloneNode(true).children[0];
   const prefixQuery = (query) => `.work-exp-${query}`;
@@ -36,13 +41,16 @@ function makeWorkExpItem({
   qtext('company-title', companyTitle);
   qtext('body-right', bodyRight);
   qget('company-title').href = companyHref;
-  qget(
-    'company-logo',
-  ).style.backgroundImage = `url('assets/companies/${companyLogo}')`;
+  const logo = qget('company-logo');
+  logo.style.backgroundImage = `url('assets/companies/${companyLogo}')`;
+  if (companyLogoStyle) {
+    Object.entries(companyLogoStyle).forEach(([k, v]) => (logo.style[k] = v));
+  }
   workExpItemsList.append(card);
 }
 
 makeWorkExpItem({
+  companyTitle: 'InsideMaps Inc',
   title: 'Junior Software Engineer',
   bodyRight: `
 Full stack web development, working on a React, AngularJS
@@ -53,8 +61,23 @@ profiling logic inside these tools. Working in an agile team
 with 2 week sprints.
   `,
   duration: 'Apr 2021 - Feb 2022',
-  location: 'Belgrade, Serbia',
-  companyTitle: 'InsideMaps Inc',
+  location: locations.belgrade,
   companyHref: 'https://www.insidemaps.com/',
   companyLogo: 'inside-maps.jpg',
+});
+
+makeWorkExpItem({
+  companyTitle: 'Microsoft',
+  title: 'Software Engineer Intern',
+  bodyRight: `
+With the help of a mentor, added new functionality to C++/C#
+based microservices used in production by Microsoft PowerPoint.
+Communicated and adapted design decisions with colleagues from
+Sunnyvale, CA.
+  `,
+  duration: 'Oct 2020 - Apr 2021',
+  location: locations.belgrade,
+  companyHref: 'https://www.microsoft.com/en-rs/mdcs',
+  companyLogo: 'microsoft.png',
+  companyLogoStyle: { height: '30px' },
 });
