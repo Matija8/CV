@@ -60,14 +60,18 @@ body {
   margin-top: 1rem;
 }
 
-.work-exp-icon-container {
+.work-exp-header:first-of-type {
+  margin-top: 0.5rem;
+}
+
+.work-exp-company-logo-container {
   width: 40px;
   height: 40px;
   display: grid;
   place-items: center start;
 }
 
-.work-exp-icon {
+.work-exp-company-logo {
   width: 40px;
   height: 40px;
   background-size: contain;

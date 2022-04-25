@@ -23,6 +23,7 @@ function makeWorkExpItem({
   location,
   companyTitle,
   companyHref,
+  companyLogo,
 }) {
   const card = workExpTemplate.content.cloneNode(true).children[0];
   const prefixQuery = (query) => `.work-exp-${query}`;
@@ -35,6 +36,9 @@ function makeWorkExpItem({
   qtext('company-title', companyTitle);
   qtext('body-right', bodyRight);
   qget('company-title').href = companyHref;
+  qget(
+    'company-logo',
+  ).style.backgroundImage = `url('assets/companies/${companyLogo}')`;
   workExpItemsList.append(card);
 }
 
@@ -52,4 +56,5 @@ with 2 week sprints.
   location: 'Belgrade, Serbia',
   companyTitle: 'InsideMaps Inc',
   companyHref: 'https://www.insidemaps.com/',
+  companyLogo: 'inside-maps.jpg',
 });
