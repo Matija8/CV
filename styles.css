@@ -60,10 +60,6 @@ body {
   margin-top: 1rem;
 }
 
-.work-exp-header:first-of-type {
-  margin-top: 0.5rem;
-}
-
 .work-exp-company-logo-container {
   width: 40px;
   height: 40px;
@@ -90,10 +86,6 @@ body {
   /* border: solid yellow; */
 }
 
-.work-exp-body-right {
-  /* display: none; */
-}
-
 #work-experience p,
 #work-experience h3 {
   margin-top: 0;
@@ -104,11 +96,14 @@ body {
   margin: 0;
 }
 
-#section-projects {
-  /* display: none; */
+main > section {
+  margin-top: 2rem;
+}
+
+main > section:first-of-type > .section-heading {
+  margin-top: 0;
 }
 
 .section-heading {
-  margin-top: 20;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }

@@ -50,6 +50,19 @@ function makeWorkExpItem({
 }
 
 makeWorkExpItem({
+  companyTitle: 'Unleash',
+  title: 'Full Stack Developer',
+  bodyRight: `
+Helping build the Unleash app🚀 (https://www.unleash.so/features).
+Working on Node.js microservices that integrate 3rd party APIs (https://www.unleash.so/integrations).`,
+  duration: 'Feb 2022 - May 2022',
+  location: locations.belgrade,
+  companyHref: 'https://www.unleash.so/',
+  companyLogo: 'unleash.jpg',
+  companyLogoStyle: { height: '33px' },
+});
+
+makeWorkExpItem({
   companyTitle: 'InsideMaps Inc',
   title: 'Junior Software Engineer',
   bodyRight: `
@@ -58,8 +71,7 @@ Full stack web development, working on a React, AngularJS
 infrastructure. Developing and maintaining features for
 internal tools. Responsible for maintaining logging and
 profiling logic inside these tools. Working in an agile team
-with 2 week sprints.
-  `,
+with 2 week sprints.`,
   duration: 'Apr 2021 - Feb 2022',
   location: locations.belgrade,
   companyHref: 'https://www.insidemaps.com/',
@@ -73,8 +85,7 @@ makeWorkExpItem({
 With the help of a mentor, added new functionality to C++/C#
 based microservices used in production by Microsoft PowerPoint.
 Communicated and adapted design decisions with colleagues from
-Sunnyvale, CA.
-  `,
+Sunnyvale, CA.`,
   duration: 'Oct 2020 - Apr 2021',
   location: locations.belgrade,
   companyHref: 'https://www.microsoft.com/en-rs/mdcs',
