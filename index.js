@@ -11,10 +11,6 @@ function cardQueryGet(card, query) {
   return card.querySelector(query);
 }
 
-function setCardQueryText(card, query, text) {
-  cardQueryGet(card, query).textContent = text;
-}
-
 function makeWorkExpItem({
   companies,
   title,
@@ -27,12 +23,10 @@ function makeWorkExpItem({
   const card = workExpTemplate.content.cloneNode(true).children[0];
   const prefixQuery = (query) => `.work-exp-${query}`;
   const qget = (query) => cardQueryGet(card, prefixQuery(query));
-  const qtext = (query, text) =>
-    setCardQueryText(card, prefixQuery(query), text);
-  qtext('worker-title', title);
-  qtext('duration', duration);
-  qtext('location', location || locations.belgrade);
-  qtext('body-right', bodyRight);
+  qget('worker-title').textContent = title;
+  qget('duration').textContent = duration;
+  qget('location').textContent = location || locations.belgrade;
+  qget('body-right').innerHTML = bodyRight;
   qget('company-title').innerHTML = companies
     .map(({ title, href }) => `<a href="${href}">${title}</a>`)
     .join(' / ');
@@ -51,8 +45,9 @@ makeWorkExpItem({
   ],
   title: 'Full Stack Developer',
   bodyRight: `
-  Helping build the Unleash app 🚀 (https://www.unleash.so/features).
-  Working on Node.js microservices that integrate 3rd party APIs (https://www.unleash.so/integrations).`,
+  Helping build the <a href="https://www.unleash.so/features">Unleash app</a> 🚀. </br>
+  Working on Node.js microservices that integrate <a href="https://www.unleash.so/integrations">3rd party APIs</a>
+  with the rest of the application infrastructure.`,
   duration: 'Feb 2022 - May 2022',
   companyLogo: 'unleash.jpg',
   companyLogoStyle: { height: '33px' },
