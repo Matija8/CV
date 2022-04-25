@@ -13,118 +13,8 @@
       rel="stylesheet"
     />
 
-    <style>
-      :root {
-        --color-blue-1: rgb(50, 50, 240);
-        font-size: 11pt;
-      }
-
-      body {
-        font-family: 'Roboto', sans-serif;
-        padding: 0;
-        margin: 0 0 3rem;
-        /* height: min(297mm, 100vh); */
-        /* height: 297mm; */
-      }
-
-      .A4 {
-        width: 210mm;
-        /* Toggle border to show margins after print */
-        /* border: 1px solid black; */
-      }
-
-      .flex {
-        display: flex;
-      }
-
-      .flex-col {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .flex-center-align {
-        display: flex;
-        align-items: center;
-      }
-
-      .icon-1 {
-        height: 20px;
-        color: red;
-        /* background-color: grey; */
-      }
-
-      .lr-padded-1 {
-        padding: 0 2rem;
-      }
-
-      .margin-0 {
-        margin: 0;
-      }
-
-      .margin-left-1 {
-        margin-left: 2rem;
-      }
-
-      .work-exp-whole-item {
-        margin-left: 2rem;
-      }
-
-      .work-exp-header {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        margin-top: 1rem;
-      }
-
-      .work-exp-icon-container {
-        width: 40px;
-        height: 40px;
-        display: grid;
-        place-items: center start;
-      }
-
-      .work-exp-icon {
-        width: 40px;
-        height: 40px;
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-
-      .work-exp-body {
-        display: flex;
-        gap: 0.5rem;
-      }
-
-      .work-exp-body-left {
-        width: 12rem;
-        flex-shrink: 0;
-        flex-grow: 0;
-        /* border: solid yellow; */
-      }
-
-      .work-exp-body-right {
-        /* display: none; */
-      }
-
-      #work-experience p,
-      #work-experience h3 {
-        margin-top: 0;
-        margin-bottom: 0;
-      }
-
-      .skill-ul {
-        margin: 0;
-      }
-
-      #section-projects {
-        /* display: none; */
-      }
-
-      .section-heading {
-        margin-top: 20;
-        margin-bottom: 0;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js" defer></script>
   </head>
 
   <body style="display: flex; justify-content: center">
@@ -189,36 +79,32 @@
       <main class="lr-padded-1">
         <section id="work-experience">
           <h2 class="section-heading">Work Experience</h2>
-          <article class="work-exp-whole-item">
-            <div class="work-exp-header" style="margin-top: 0.5rem">
-              <div class="work-exp-icon-container">
-                <div
-                  class="work-exp-icon"
-                  style="
-                    background-image: url('./assets/companies/inside-maps.jpg');
-                    /* width: 50px;
+
+          <template data-work-exp-item>
+            <article class="work-exp-whole-item">
+              <div class="work-exp-header" style="margin-top: 0.5rem">
+                <div class="work-exp-icon-container">
+                  <div
+                    class="work-exp-icon"
+                    style="
+                      background-image: url('./assets/companies/inside-maps.jpg');
+                      /* width: 50px;
                   height: 50px; */
-                  "
-                ></div>
+                    "
+                  ></div>
+                </div>
+                <h3 class="work-exp-worker-title"></h3>
               </div>
-              <h3>Junior Software Engineer</h3>
-            </div>
-            <div class="work-exp-body">
-              <div class="work-exp-body-left">
-                <a href="https://www.insidemaps.com/">InsideMaps Inc</a>
-                <p>Apr 2021 - Feb 2022</p>
-                <p>Belgrade, Serbia</p>
+              <div class="work-exp-body">
+                <div class="work-exp-body-left">
+                  <a class="work-exp-company-title"></a>
+                  <p class="work-exp-duration"></p>
+                  <p class="work-exp-location"></p>
+                </div>
+                <p class="work-exp-body-right"></p>
               </div>
-              <p class="work-exp-body-right">
-                Full stack web development, working on a React, AngularJS (yes,
-                the old one), Node.js, AWS, Typescript and MongoDB based
-                infrastructure. Developing and maintaining features for internal
-                tools. Responsible for maintaining logging and profiling logic
-                inside these tools. Working in an agile team with 2 week
-                sprints.
-              </p>
-            </div>
-          </article>
+            </article>
+          </template>
 
           <article class="work-exp-whole-item">
             <div class="work-exp-header">

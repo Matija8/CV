@@ -1,0 +1,110 @@
+:root {
+  --color-blue-1: rgb(50, 50, 240);
+  font-size: 11pt;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0 0 3rem;
+  /* height: min(297mm, 100vh); */
+  /* height: 297mm; */
+}
+
+.A4 {
+  width: 210mm;
+  /* Toggle border to show margins after print */
+  /* border: 1px solid black; */
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center-align {
+  display: flex;
+  align-items: center;
+}
+
+.icon-1 {
+  height: 20px;
+  color: red;
+  /* background-color: grey; */
+}
+
+.lr-padded-1 {
+  padding: 0 2rem;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+.margin-left-1 {
+  margin-left: 2rem;
+}
+
+.work-exp-whole-item {
+  margin-left: 2rem;
+}
+
+.work-exp-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.work-exp-icon-container {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center start;
+}
+
+.work-exp-icon {
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.work-exp-body {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.work-exp-body-left {
+  width: 12rem;
+  flex-shrink: 0;
+  flex-grow: 0;
+  /* border: solid yellow; */
+}
+
+.work-exp-body-right {
+  /* display: none; */
+}
+
+#work-experience p,
+#work-experience h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.skill-ul {
+  margin: 0;
+}
+
+#section-projects {
+  /* display: none; */
+}
+
+.section-heading {
+  margin-top: 20;
+  margin-bottom: 0;
+}
