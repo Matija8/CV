@@ -15,7 +15,6 @@ function setCardQueryText(card, query, text) {
   cardQueryGet(card, query).textContent = text;
 }
 
-console.log(workExpTemplate);
 function makeWorkExpItem({
   companies,
   title,
@@ -32,7 +31,7 @@ function makeWorkExpItem({
     setCardQueryText(card, prefixQuery(query), text);
   qtext('worker-title', title);
   qtext('duration', duration);
-  qtext('location', location ?? locations.belgrade);
+  qtext('location', location || locations.belgrade);
   qtext('body-right', bodyRight);
   qget('company-title').innerHTML = companies
     .map(({ title, href }) => `<a href="${href}">${title}</a>`)
