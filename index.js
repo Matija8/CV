@@ -53,7 +53,7 @@ makeWorkExpItem({
   companyTitle: 'Unleash',
   title: 'Full Stack Developer',
   bodyRight: `
-Helping build the Unleash app🚀 (https://www.unleash.so/features).
+Helping build the Unleash app 🚀 (https://www.unleash.so/features).
 Working on Node.js microservices that integrate 3rd party APIs (https://www.unleash.so/integrations).`,
   duration: 'Feb 2022 - May 2022',
   location: locations.belgrade,

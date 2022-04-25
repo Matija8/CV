@@ -15,7 +15,16 @@ body {
   width: 210mm;
   /* Toggle border to show margins after print */
   /* border: 1px solid black; */
+  padding: 2rem;
 }
+
+/* .A4 > * {
+  padding: 0 2rem;
+}
+
+.A4:first-child {
+  padding-top: 2rem;
+} */
 
 .flex {
   display: flex;
@@ -35,10 +44,6 @@ body {
   height: 20px;
   color: red;
   /* background-color: grey; */
-}
-
-.lr-padded-1 {
-  padding: 0 2rem;
 }
 
 .margin-0 {
@@ -100,10 +105,11 @@ main > section {
   margin-top: 2rem;
 }
 
-main > section:first-of-type > .section-heading {
+main > section:first-of-type {
   margin-top: 0;
 }
 
 .section-heading {
+  margin-top: 0;
   margin-bottom: 1rem;
 }
