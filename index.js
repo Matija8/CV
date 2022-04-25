@@ -1,7 +1,7 @@
 console.log('Cv js works!');
 
 const workExpTemplate = document.querySelector('[data-work-exp-item]');
-const workExpItemsList = document.querySelector('#work-experience');
+const workExpItemsList = document.querySelector('#section-work-experience');
 
 const locations = {
   belgrade: 'Belgrade, Serbia',
