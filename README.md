@@ -1,6 +1,6 @@
 # CV/Resume
 
-[Preview](https://matija8.github.io/CV/)
+[Preview V2](<https://matija8.github.io/CV/V2%20(Html)>)
 
 ---
 
