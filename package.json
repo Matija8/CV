@@ -1,0 +1,11 @@
+{
+  "name": "cv",
+  "version": "0.0.0",
+  "repository": "git@github.com:Matija8/CV.git",
+  "author": "matija8 <matijanme@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "cd v3 && yarn start"
+  }
+}
