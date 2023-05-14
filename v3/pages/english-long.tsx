@@ -11,14 +11,16 @@ const Page: NextPage = () => {
   const content = (
     <main
       style={{
+        backgroundColor: 'white',
         width: '210mm',
+        minHeight: '100vh',
         margin: '0 auto',
-        padding: '2rem',
+        padding: '4rem',
         border: 0 ? '1px solid black' : '',
       }}
     >
-      {/* Full stack? */}
-      <h1>Frontend Developer</h1>
+      {/* Full stack? Frontend? */}
+      <h1>Software Engineer</h1>
       <h2>Matija Miličević</h2>
       <ul style={{ listStyle: 'none', padding: '4px' }}>
         <Li>
@@ -45,7 +47,7 @@ const Page: NextPage = () => {
       <section>
         <h3>Summary</h3>
         <p>
-          Diligent frontend engineer with 3+ years of experience in commercial
+          Diligent software engineer with 3+ years of experience in commercial
           application development. Mainly specilazies in TypeScript, React &
           Node.js.
         </p>
@@ -58,14 +60,21 @@ const Page: NextPage = () => {
       <section>
         <h3>Skills/Technologies</h3>
       </section>
+
+      <section>
+        <h3>Education</h3>
+        <a href="https://www.bg.ac.rs/en/">University of Belgrade</a> -{' '}
+        <a href="http://www.matf.bg.ac.rs/eng/">Faculty of Mathematics</a>
+        <p>Bachelor of Informatics: Graduated in February 2023</p>
+      </section>
     </main>
   );
 
   return (
-    <>
+    <div style={{ backgroundColor: 'grey', height: '100%' }}>
       {head}
       {content}
-    </>
+    </div>
   );
 };
 
