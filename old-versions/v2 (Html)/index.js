@@ -43,7 +43,13 @@ makeWorkExpItem({
     { title: 'CompStak', href: 'https://www.microsoft.com/en-rs/mdcs' },
   ],
   title: 'Front End Engineer',
-  bodyRight: ``,
+  bodyRight: `
+  Maintaining and adding new features to internal tools used for parsing real estate comparables.
+  Adding features to the company <a href="https://compstak.com/exchange">real estate platform🏠</a>.
+  Adding and maintaing ui widgets inside of the company storybook component library.
+  Collaborating with colleagues to find the best solutions for complex problems.
+  Mentoring junior colleagues.
+  `,
   duration: 'May 2022 - Current Employee',
   companyLogo: 'compstak.jpg',
   companyLogoStyle: { height: '38px' },
