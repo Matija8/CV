@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -15,13 +16,12 @@ const Page: NextPage = () => {
         width: '210mm',
         minHeight: '100vh',
         margin: '0 auto',
-        padding: '4rem',
+        padding: '1rem 4rem',
       }}
     >
       {/* Full stack? Frontend? */}
-      <h1>Software Engineer</h1>
-      <h2>Matija Miličević</h2>
-      <ul style={{ listStyle: 'none', padding: '4px' }}>
+      <h1>Matija Miličević - Software Engineer</h1>
+      <ul style={{ listStyle: 'none', padding: 0 }}>
         <Li>
           📍<B1>Location:</B1> Belgrade, Serbia
         </Li>
@@ -46,9 +46,8 @@ const Page: NextPage = () => {
       <section>
         <h3>Summary</h3>
         <p>
-          Diligent software engineer with 3+ years of experience in commercial
-          application development. Mainly specilazies in TypeScript, React &
-          Node.js.
+          Diligent software engineer that mainly specializes in TypeScript,
+          React & Node.js.
         </p>
       </section>
 
@@ -61,7 +60,29 @@ const Page: NextPage = () => {
       </section>
 
       <section>
-        <h3>Skills/Technologies</h3>
+        <h3>Skills & Technologies</h3>
+
+        <div className="flex" style={{ gap: '4rem' }}>
+          <ul className="flex-col skill-ul">
+            <li>TypeScript, JavaScript (ES3-ES2022)</li>
+            <li>MVC Frameworks - React, Next.Js</li>
+            <li>State Managment - TanStack Query, Redux</li>
+            <li>Back End - Node.js, Deno.js, Express.js</li>
+            <li>NoSQL - MongoDB, Elasticsearch</li>
+            <li>RDBMS - PostgreSQL</li>
+            <li>Unit Testing - Vitest, Jest</li>
+          </ul>
+
+          <ul className="flex-col skill-ul">
+            <li>Scripting - Python, Bash, Node.js</li>
+            <li>VCS - Git, GitHub/GitLab</li>
+            <li>C++</li>
+            <li>Java 11</li>
+            <li>Design Patterns</li>
+            <li>Agile Development</li>
+            <li>Communication</li>
+          </ul>
+        </div>
       </section>
 
       <section>
@@ -92,7 +113,7 @@ function Li(
       style={{
         display: 'flex',
         alignItems: 'flex-end',
-        margin: '8px',
+        margin: '8px 0',
         ...props.style,
       }}
       {...props}
@@ -117,30 +138,30 @@ function B1(
   );
 }
 
-function WorkExpItem({ companies, title }: { companies: any; title: string }) {
+function WorkExpItem({ Companies, title }: { Companies: any; title: string }) {
   return (
-    <div style={{ margin: '16px' }}>
+    <div style={{}}>
       <h3 style={{ marginBottom: '4px' }}>{title}</h3>
-      <h5 style={{ margin: '4px' }}>
-        at{' '}
-        {typeof companies === 'function'
-          ? companies()
-          : companies.map((cmpn) => (
-              <a href={cmpn.href} key={cmpn.href}>
-                {cmpn.title}
-              </a>
-            ))}
-      </h5>
+      <div style={{ marginTop: '4px' }}>
+        at <Companies />
+      </div>
     </div>
   );
 }
 
 const workItems = [
   {
-    companies: () => (
+    Companies: () => (
       <>
         <a href="https://www.unleash.so/">Unleash</a> (
         <a href="https://team-sava.com/">via Team Sava</a>)
+        {/* <span>
+          <img
+            src="./companies/unleash.jpg"
+            alt="company-unleash"
+            className="icon-1"
+          />
+        </span> */}
       </>
     ),
     title: 'Full Stack Developer',
@@ -153,7 +174,7 @@ const workItems = [
     companyLogoStyle: { height: '33px' },
   },
   {
-    companies: () => <a href="https://www.insidemaps.com/">InsideMaps Inc</a>,
+    Companies: () => <a href="https://www.insidemaps.com/">InsideMaps Inc</a>,
     title: 'Junior Software Engineer',
     bodyRight: `
   Full stack web development, working on a React, AngularJS
@@ -166,7 +187,7 @@ const workItems = [
     companyLogo: 'inside-maps.jpg',
   },
   {
-    companies: () => (
+    Companies: () => (
       <a href="https://www.microsoft.com/en-rs/mdcs">Microsoft</a>
     ),
     title: 'Software Engineer Intern',
