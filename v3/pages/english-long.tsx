@@ -16,7 +16,6 @@ const Page: NextPage = () => {
         minHeight: '100vh',
         margin: '0 auto',
         padding: '4rem',
-        border: 0 ? '1px solid black' : '',
       }}
     >
       {/* Full stack? Frontend? */}
@@ -55,6 +54,10 @@ const Page: NextPage = () => {
 
       <section>
         <h3>Experience</h3>
+
+        <WorkExpItem {...workItems[0]} />
+        <WorkExpItem {...workItems[1]} />
+        <WorkExpItem {...workItems[2]} />
       </section>
 
       <section>
@@ -88,7 +91,7 @@ function Li(
     <li
       style={{
         display: 'flex',
-        justifyItems: 'flex-end',
+        alignItems: 'flex-end',
         margin: '8px',
         ...props.style,
       }}
@@ -113,5 +116,69 @@ function B1(
     />
   );
 }
+
+function WorkExpItem({ companies, title }: { companies: any; title: string }) {
+  return (
+    <div style={{ margin: '16px' }}>
+      <h3 style={{ marginBottom: '4px' }}>{title}</h3>
+      <h5 style={{ margin: '4px' }}>
+        at{' '}
+        {typeof companies === 'function'
+          ? companies()
+          : companies.map((cmpn) => (
+              <a href={cmpn.href} key={cmpn.href}>
+                {cmpn.title}
+              </a>
+            ))}
+      </h5>
+    </div>
+  );
+}
+
+const workItems = [
+  {
+    companies: () => (
+      <>
+        <a href="https://www.unleash.so/">Unleash</a> (
+        <a href="https://team-sava.com/">via Team Sava</a>)
+      </>
+    ),
+    title: 'Full Stack Developer',
+    bodyRight: `
+  Helping build the <a href="https://www.unleash.so/features">Unleash app</a> 🚀. </br>
+  Working on Node.js microservices that integrate <a href="https://www.unleash.so/integrations">3rd party APIs</a>
+  with the rest of the application infrastructure.`,
+    duration: 'Feb 2022 - May 2022',
+    companyLogo: 'unleash.jpg',
+    companyLogoStyle: { height: '33px' },
+  },
+  {
+    companies: () => <a href="https://www.insidemaps.com/">InsideMaps Inc</a>,
+    title: 'Junior Software Engineer',
+    bodyRight: `
+  Full stack web development, working on a React, AngularJS
+  (yes, the old one), Node.js, AWS, Typescript and MongoDB based
+  infrastructure. Developing and maintaining features for
+  internal tools. Responsible for maintaining logging and
+  profiling logic inside these tools. Working in an agile team
+  with 2 week sprints.`,
+    duration: 'Apr 2021 - Feb 2022',
+    companyLogo: 'inside-maps.jpg',
+  },
+  {
+    companies: () => (
+      <a href="https://www.microsoft.com/en-rs/mdcs">Microsoft</a>
+    ),
+    title: 'Software Engineer Intern',
+    bodyRight: `
+  With the help of a mentor, added new functionality to C++/C#
+  based microservices used in production by Microsoft PowerPoint.
+  Communicated and adapted design decisions with colleagues from
+  Sunnyvale, CA.`,
+    duration: 'Oct 2020 - Apr 2021',
+    companyLogo: 'microsoft.png',
+    companyLogoStyle: { height: '30px' },
+  },
+];
 
 export default Page;
