@@ -21,14 +21,6 @@ body {
   min-height: 99vh;
 }
 
-/* .A4 > * {
-  padding: 0 2rem;
-}
-
-.A4:first-child {
-  padding-top: 2rem;
-} */
-
 a,
 a:visited,
 a:hover,
@@ -69,6 +61,7 @@ a:active {
 
 .work-exp-whole-item {
   margin-left: 2rem;
+  margin-bottom: 2rem;
 }
 
 .work-exp-header {
@@ -112,8 +105,12 @@ a:active {
 
 .skill-ul {
   margin: 0;
-  /* padding: 0; */
+  padding: 0;
   list-style: none;
+}
+
+.skill-ul > li {
+  margin-top: 8px;
 }
 
 main > section {

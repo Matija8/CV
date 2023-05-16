@@ -68,9 +68,7 @@ const Page: NextPage = () => {
           <ul className="flex-col skill-ul">
             <li className="li-2">TypeScript, JavaScript (ES3-ESNext)</li>
             <li className="li-2">Ui Frameworks - React, Next.js, Meteor.js</li>
-            <li className="li-2">
-              State Managment - TanStack Query, Redux{/* , RxJS */}
-            </li>
+            <li className="li-2">State Managment - TanStack Query, Redux</li>
             <li className="li-2">Back End - Node.js, Deno.js, Express.js</li>
             <li className="li-2">
               Testing - Vitest, Jest, React Testing Library, Storybook
