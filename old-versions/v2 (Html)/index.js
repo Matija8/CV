@@ -17,16 +17,20 @@ function makeWorkExpItem({
   bodyRight,
   duration,
   location,
+  stack,
   companyLogo,
   companyLogoStyle,
 }) {
   const card = workExpTemplate.content.cloneNode(true).children[0];
   const prefixQuery = (query) => `.work-exp-${query}`;
   const qget = (query) => cardQueryGet(card, prefixQuery(query));
+  const stackHtml = stack
+    ? `<div style="margin-bottom: 4px"><b>Stack</b>: ${stack}</div>`
+    : '';
   qget('worker-title').textContent = title;
   qget('duration').textContent = duration;
   qget('location').textContent = location || locations.belgrade;
-  qget('body-right').innerHTML = bodyRight;
+  qget('body-right').innerHTML = stackHtml + bodyRight;
   qget('company-title').innerHTML = companies
     .map(({ title, href }) => `<a href="${href}">${title}</a>`)
     .join(' / ');
@@ -53,6 +57,7 @@ makeWorkExpItem({
   duration: 'May 2022 - Current Employee',
   companyLogo: 'compstak.jpg',
   companyLogoStyle: { height: '38px' },
+  stack: 'React, TypeScript, styled-components, TanStack Query, TanStack Table',
 });
 
 makeWorkExpItem({
@@ -68,6 +73,7 @@ makeWorkExpItem({
   duration: 'Feb 2022 - May 2022',
   companyLogo: 'unleash.jpg',
   companyLogoStyle: { height: '33px' },
+  stack: 'Node.js, TypeScript',
 });
 
 makeWorkExpItem({
@@ -82,6 +88,7 @@ makeWorkExpItem({
   with 2 week sprints.`,
   duration: 'Apr 2021 - Feb 2022',
   companyLogo: 'inside-maps.jpg',
+  stack: 'React, TypeScript, Node.js, MongoDB, Elasticsearch',
 });
 
 makeWorkExpItem({
@@ -97,4 +104,5 @@ makeWorkExpItem({
   duration: 'Oct 2020 - Apr 2021',
   companyLogo: 'microsoft.png',
   companyLogoStyle: { height: '30px' },
+  stack: 'C++',
 });
