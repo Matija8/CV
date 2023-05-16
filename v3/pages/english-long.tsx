@@ -20,76 +20,87 @@ const Page: NextPage = () => {
       }}
     >
       {/* Full stack? Frontend? */}
-      <h1>Matija Miličević - Software Engineer</h1>
-      <ul style={{ listStyle: 'none', padding: 0 }}>
-        <Li>
-          📍<B1>Location:</B1> Belgrade, Serbia
-        </Li>
-        <Li>
-          📪<B1>Mail:</B1>
-          <a href="mailto: matijanme@gmail.com">matijanme@gmail.com</a>
-        </Li>
-        <Li>
-          <img src="./github.svg" alt="github icon" />
-          <B1>GitHub:</B1>
-          <a href="https://github.com/Matija8">github.com/Matija8</a>
-        </Li>
-        <Li>
-          <img src="./linkedin.svg" alt="github icon" />
-          <B1>LinkedIn:</B1>
-          <a href="https://www.linkedin.com/in/matija-milicevic/">
-            linkedin.com/in/matija-milicevic
-          </a>
-        </Li>
-      </ul>
+      <section className="section-1">
+        <h1>Matija Miličević - Software Engineer</h1>
+        <ul style={{ listStyle: 'none', padding: 0 }}>
+          <li className="li-1">
+            📍<B1>Location:</B1> Belgrade, Serbia
+          </li>
+          <li className="li-1">
+            📪<B1>Mail:</B1>
+            <a href="mailto: matijanme@gmail.com">matijanme@gmail.com</a>
+          </li>
+          <li className="li-1">
+            <img src="./github.svg" alt="github icon" />
+            <B1>GitHub:</B1>
+            <a href="https://github.com/Matija8">github.com/Matija8</a>
+          </li>
+          <li className="li-1">
+            <img src="./linkedin.svg" alt="github icon" />
+            <B1>LinkedIn:</B1>
+            <a href="https://www.linkedin.com/in/matija-milicevic/">
+              linkedin.com/in/matija-milicevic
+            </a>
+          </li>
+        </ul>
+      </section>
 
-      <section>
-        <h3>Summary</h3>
+      <section className="section-1">
+        <h2 className="section-title">Summary</h2>
         <p>
           Diligent software engineer that mainly specializes in TypeScript,
           React & Node.js.
         </p>
       </section>
 
-      <section>
-        <h3>Experience</h3>
+      <section className="section-1">
+        <h2 className="section-title">Experience</h2>
 
         <WorkExpItem {...workItems[0]} />
         <WorkExpItem {...workItems[1]} />
         <WorkExpItem {...workItems[2]} />
       </section>
 
-      <section>
-        <h3>Skills & Technologies</h3>
+      <section className="section-1">
+        <h2 className="section-title">Skills & Technologies</h2>
 
         <div className="flex" style={{ gap: '4rem' }}>
           <ul className="flex-col skill-ul">
-            <li>TypeScript, JavaScript (ES3-ES2022)</li>
-            <li>MVC Frameworks - React, Next.Js</li>
-            <li>State Managment - TanStack Query, Redux</li>
-            <li>Back End - Node.js, Deno.js, Express.js</li>
-            <li>NoSQL - MongoDB, Elasticsearch</li>
-            <li>RDBMS - PostgreSQL</li>
-            <li>Unit Testing - Vitest, Jest</li>
+            <li className="li-2">TypeScript, JavaScript (ES3-ESNext)</li>
+            <li className="li-2">Ui Frameworks - React, Next.js, Meteor.js</li>
+            <li className="li-2">
+              State Managment - TanStack Query, Redux{/* , RxJS */}
+            </li>
+            <li className="li-2">Back End - Node.js, Deno.js, Express.js</li>
+            <li className="li-2">
+              Testing - Vitest, Jest, React Testing Library, Storybook
+            </li>
+            <li className="li-2">NoSQL - MongoDB, Elasticsearch</li>
+            <li className="li-2">RDBMS - PostgreSQL</li>
           </ul>
 
           <ul className="flex-col skill-ul">
-            <li>Scripting - Python, Bash, Node.js</li>
-            <li>VCS - Git, GitHub/GitLab</li>
-            <li>C++</li>
-            <li>Java 11</li>
-            <li>Design Patterns</li>
-            <li>Agile Development</li>
-            <li>Communication</li>
+            <li className="li-2">Scripting - Python, Bash</li>
+            <li className="li-2">VCS - Git, GitHub/GitLab</li>
+            <li className="li-2">Docker</li>
+            <li className="li-2">C++, Java, Go</li>
+            <li className="li-2">Design Patterns</li>
+            <li className="li-2">Agile Development</li>
+            <li className="li-2">Communication, ChatGpt prompting</li>
           </ul>
         </div>
       </section>
 
-      <section>
-        <h3>Education</h3>
-        <a href="https://www.bg.ac.rs/en/">University of Belgrade</a> -{' '}
-        <a href="http://www.matf.bg.ac.rs/eng/">Faculty of Mathematics</a>
-        <p>Bachelor of Informatics: Graduated in February 2023</p>
+      <section className="section-1">
+        <h2 className="section-title">Education</h2>
+        <div className="flex" style={{ gap: '6px' }}>
+          <div className="flex-col">
+            <span>Bachelor of Informatics</span>
+            <a href="https://www.bg.ac.rs/en/">University of Belgrade</a>
+            <a href="http://www.matf.bg.ac.rs/eng/">Faculty of Mathematics</a>
+            <span>Graduated in February 2023</span>
+          </div>
+        </div>
       </section>
     </main>
   );
@@ -101,25 +112,6 @@ const Page: NextPage = () => {
     </div>
   );
 };
-
-function Li(
-  props: React.DetailedHTMLProps<
-    React.LiHTMLAttributes<HTMLLIElement>,
-    HTMLLIElement
-  >,
-) {
-  return (
-    <li
-      style={{
-        display: 'flex',
-        alignItems: 'flex-end',
-        margin: '8px 0',
-        ...props.style,
-      }}
-      {...props}
-    />
-  );
-}
 
 function B1(
   props: React.DetailedHTMLProps<
@@ -153,8 +145,8 @@ const workItems = [
   {
     Companies: () => (
       <>
-        <a href="https://www.unleash.so/">Unleash</a> (
-        <a href="https://team-sava.com/">via Team Sava</a>)
+        <a href="https://www.unleash.so/">Unleash</a> (via{' '}
+        <a href="https://team-sava.com/">Team Sava</a>)
         {/* <span>
           <img
             src="./companies/unleash.jpg"
