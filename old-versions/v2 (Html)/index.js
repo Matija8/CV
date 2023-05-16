@@ -40,6 +40,17 @@ function makeWorkExpItem({
 
 makeWorkExpItem({
   companies: [
+    { title: 'CompStak', href: 'https://www.microsoft.com/en-rs/mdcs' },
+  ],
+  title: 'Front End Engineer',
+  bodyRight: ``,
+  duration: 'May 2022 - Current Employee',
+  companyLogo: 'compstak.jpg',
+  companyLogoStyle: { height: '38px' },
+});
+
+makeWorkExpItem({
+  companies: [
     { title: 'Unleash', href: 'https://www.unleash.so/' },
     { title: 'Team Sava', href: 'https://team-sava.com/' },
   ],

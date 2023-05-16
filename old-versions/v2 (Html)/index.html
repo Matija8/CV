@@ -17,14 +17,12 @@
     <script src="index.js" defer></script>
   </head>
 
-  <body style="display: flex; justify-content: center">
+  <body style="display: flex; justify-content: center; background-color: grey">
     <div class="A4">
       <header class="flex" style="justify-content: space-between">
         <div class="flex-col" style="align-items: center">
           <h1 class="margin-0">Matija Miličević</h1>
-          <h3
-            style="font-weight: 600; color: gray; font-style: italic; margin: 0"
-          >
+          <h3 style="font-weight: 600; color: gray; margin: 0">
             Software Engineer
           </h3>
         </div>
@@ -32,7 +30,7 @@
           class="flex-item-float-right flex"
           style="align-items: flex-end; gap: 0.5rem"
         >
-          <address class="flex-col">
+          <div class="flex-col">
             <span class="flex-center-align">
               <img
                 src="./assets/map-marker.svg"
@@ -59,7 +57,7 @@
               <img src="./assets/email.svg" alt="email" class="icon-1" />
               <a href="mailto: matijanme@gmail.com">matijanme@gmail.com</a>
             </span>
-          </address>
+          </div>
           <!-- <img
             src="./assets/headshot.jpg"
             alt="Avatar"
@@ -75,7 +73,7 @@
 
       <main>
         <section id="section-work-experience">
-          <h2 class="section-heading">Work Experience</h2>
+          <h2 class="section-heading">Experience</h2>
 
           <template data-work-exp-item>
             <article class="work-exp-whole-item">
@@ -122,7 +120,7 @@
               </div>
 
               <div>
-                <p class="margin-0">2015 - TBC</p>
+                <p class="margin-0">Graduated in 2023</p>
                 <p class="margin-0">Belgrade, Serbia</p>
               </div>
             </div>
@@ -135,13 +133,13 @@
 
           <div class="flex">
             <ul class="flex-col skill-ul">
-              <li>ES3-ES6 JavaScript, TypeScript</li>
-              <li>MVC Frameworks - React, Angular</li>
-              <li>State Managment - RxJS, Redux</li>
-              <li>Back End - Node.js, Express.js</li>
+              <li>TypeScript, JavaScript (ES3-ESNext)</li>
+              <li>Ui Frameworks - React, Next.js, Meteor.js</li>
+              <li>State Managment - TanStack Query, Redux</li>
+              <li>Back End - Node.js, Deno.js, Express.js</li>
+              <li>Testing - Vitest, Jest, React Testing Library, Storybook</li>
               <li>NoSQL - MongoDB, Elasticsearch</li>
-              <li>RDBMS - Postgres, SQL</li>
-              <li>Unit Testing - Jest</li>
+              <li>RDBMS - PostgreSQL</li>
             </ul>
 
             <ul class="flex-col skill-ul">
@@ -154,49 +152,6 @@
               <li>Communication</li>
             </ul>
           </div>
-        </section>
-
-        <section id="section-projects">
-          <h2 class="section-heading">Projects</h2>
-
-          <p class="margin-left-1">
-            <b>Mail client and server (Jun 2020)</b> - Implemented a gmail clone
-            in a team with 4 colleagues. Team role was to lead the front end
-            part of the team, synchronize message streams and do general client
-            side programming. Technologies used on the client were Angular 9,
-            RxJS and Angular Material. Node.js and postgres with TypeORM were
-            used on the server (<a href="https://github.com/Matija8/Post.ar"
-              >repo</a
-            >).
-          </p>
-
-          <p class="margin-left-1">
-            <b>Minesweeper (Jan 2020)</b> - Project for a JavaScript course held
-            by the Levi9 company. Project consists of 3 parts: 1) Vanilla JS
-            video game (minesweeper); 2) Node.js + MongoDB server for storing
-            high scores; 3) React SPA leaderboard for displaying the high scores
-            (<a href="https://github.com/Matija8/Js-Minesweeper">repo</a>).
-          </p>
-
-          <!-- <p class="margin-left-1">
-            <b>Free throw shooting (May 2019)</b> - Mathematical modeling course
-            project. In a team with a colleague, written a paper on calculating
-            the optimal shot angle in relation to the height of the free throw
-            shooter. Angle calculation was implemented using Python and the
-            NumPy library (<a
-              href="https://github.com/Matija8/Slobodna-bacanja-Latex-"
-              >repo)</a
-            >.
-          </p> -->
-
-          <p class="margin-left-1">
-            <b>Side-scroller video game (Jan 2018)</b> - Computer graphics
-            course project. Written in C++, using OpenGL for graphics rendering.
-            The goal of the game is to reach the last platform (<a
-              href="https://github.com/Matija8/Sidescrolling-platform-video-game"
-              >repo</a
-            >).
-          </p>
         </section>
       </main>
     </div>

@@ -6,7 +6,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   padding: 0;
-  margin: 0 0 3rem;
+  margin: 0;
   /* height: min(297mm, 100vh); */
   /* height: 297mm; */
 }
@@ -15,7 +15,10 @@ body {
   width: 210mm;
   /* Toggle border to show margins after print */
   /* border: 1px solid black; */
-  padding: 2rem 2rem 0;
+  padding: 2rem 4rem;
+
+  background-color: white;
+  min-height: 99vh;
 }
 
 /* .A4 > * {
@@ -25,6 +28,15 @@ body {
 .A4:first-child {
   padding-top: 2rem;
 } */
+
+a,
+a:visited,
+a:hover,
+a:active {
+  /* https://stackoverflow.com/questions/1929618/set-visited-link-color-to-whatever-the-color-of-un-visited-link-is-p-s-not-the */
+  /* color: inherit; */
+  color: #4f46e5;
+}
 
 .flex {
   display: flex;
@@ -42,7 +54,8 @@ body {
 
 .icon-1 {
   height: 20px;
-  color: red;
+  margin-right: 4px;
+  /* color: red; */
   /* background-color: grey; */
 }
 
@@ -85,7 +98,7 @@ body {
 }
 
 .work-exp-body-left {
-  width: 12rem;
+  width: 15rem;
   flex-shrink: 0;
   flex-grow: 0;
   /* border: solid yellow; */
@@ -99,6 +112,8 @@ body {
 
 .skill-ul {
   margin: 0;
+  /* padding: 0; */
+  list-style: none;
 }
 
 main > section {
