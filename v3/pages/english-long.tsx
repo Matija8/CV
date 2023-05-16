@@ -16,7 +16,7 @@ const Page: NextPage = () => {
         width: '210mm',
         minHeight: '100vh',
         margin: '0 auto',
-        padding: '1rem 4rem',
+        padding: '1rem 4rem 4rem',
       }}
     >
       {/* Full stack? Frontend? */}
@@ -56,9 +56,9 @@ const Page: NextPage = () => {
       <section className="section-1">
         <h2 className="section-title">Experience</h2>
 
-        <WorkExpItem {...workItems[0]} />
-        <WorkExpItem {...workItems[1]} />
-        <WorkExpItem {...workItems[2]} />
+        {workItems.map((item, idx) => (
+          <WorkExpItem key={idx} {...item} />
+        ))}
       </section>
 
       <section className="section-1">
@@ -95,9 +95,11 @@ const Page: NextPage = () => {
         <h2 className="section-title">Education</h2>
         <div className="flex" style={{ gap: '6px' }}>
           <div className="flex-col">
-            <span>Bachelor of Informatics</span>
-            <a href="https://www.bg.ac.rs/en/">University of Belgrade</a>
-            <a href="http://www.matf.bg.ac.rs/eng/">Faculty of Mathematics</a>
+            <span>
+              Bachelor of Informatics -{' '}
+              <a href="http://www.matf.bg.ac.rs/eng/">Faculty of Mathematics</a>{' '}
+              (<a href="https://www.bg.ac.rs/en/">University of Belgrade</a>)
+            </span>
             <span>Graduated in February 2023</span>
           </div>
         </div>
@@ -130,10 +132,33 @@ function B1(
   );
 }
 
-function WorkExpItem({ Companies, title }: { Companies: any; title: string }) {
+function WorkExpItem({
+  Companies,
+  Logo,
+  title,
+}: {
+  Companies: any;
+  Logo: any;
+  title: string;
+}) {
+  const logoDiv = (
+    <div
+      className="flex"
+      style={{
+        width: '2rem',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
+      {Logo && <Logo />}
+    </div>
+  );
   return (
-    <div style={{}}>
-      <h3 style={{ marginBottom: '4px' }}>{title}</h3>
+    <div style={{ margin: 0, marginBottom: '2rem' }}>
+      <div className="flex" style={{ alignItems: 'center', gap: '8px' }}>
+        {logoDiv}
+        <h3 style={{ margin: 0 }}>{title}</h3>
+      </div>
       <div style={{ marginTop: '4px' }}>
         at <Companies />
       </div>
@@ -143,18 +168,29 @@ function WorkExpItem({ Companies, title }: { Companies: any; title: string }) {
 
 const workItems = [
   {
+    title: 'Front End Engineer',
+    Companies: () => (
+      <>
+        <a href="https://compstak.com/">CompStak</a>
+      </>
+    ),
+    Logo: () => (
+      <img
+        src="./companies/compstak.jpg"
+        alt="company-compstak"
+        height="32px"
+      />
+    ),
+  },
+  {
     Companies: () => (
       <>
         <a href="https://www.unleash.so/">Unleash</a> (via{' '}
         <a href="https://team-sava.com/">Team Sava</a>)
-        {/* <span>
-          <img
-            src="./companies/unleash.jpg"
-            alt="company-unleash"
-            className="icon-1"
-          />
-        </span> */}
       </>
+    ),
+    Logo: () => (
+      <img src="./companies/unleash.jpg" alt="company-unleash" height="24px" />
     ),
     title: 'Full Stack Developer',
     bodyRight: `
@@ -167,6 +203,13 @@ const workItems = [
   },
   {
     Companies: () => <a href="https://www.insidemaps.com/">InsideMaps Inc</a>,
+    Logo: () => (
+      <img
+        src="./companies/insidemaps.jpg"
+        alt="company-inside-maps"
+        height="32px"
+      />
+    ),
     title: 'Junior Software Engineer',
     bodyRight: `
   Full stack web development, working on a React, AngularJS
@@ -181,6 +224,13 @@ const workItems = [
   {
     Companies: () => (
       <a href="https://www.microsoft.com/en-rs/mdcs">Microsoft</a>
+    ),
+    Logo: () => (
+      <img
+        src="./companies/microsoft.png"
+        alt="company-microsoft"
+        height="24px"
+      />
     ),
     title: 'Software Engineer Intern',
     bodyRight: `
