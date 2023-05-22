@@ -14,7 +14,7 @@ function cardQueryGet(card, query) {
 function makeWorkExpItem({
   companies,
   title,
-  bodyRight,
+  description,
   duration,
   location,
   stack,
@@ -24,16 +24,20 @@ function makeWorkExpItem({
   const card = workExpTemplate.content.cloneNode(true).children[0];
   const prefixQuery = (query) => `.work-exp-${query}`;
   const qget = (query) => cardQueryGet(card, prefixQuery(query));
-  const stackHtml = stack
-    ? `<div style="margin-bottom: 4px"><b>Stack</b>: ${stack}</div>`
-    : '';
+  const stackHtml = stack ? `<b>Stack</b>: ${stack}` : '';
   qget('worker-title').textContent = title;
-  qget('duration').textContent = duration;
-  qget('location').textContent = location || locations.belgrade;
-  qget('body-right').innerHTML = stackHtml + bodyRight;
-  qget('company-title').innerHTML = companies
-    .map(({ title, href }) => `<a href="${href}">${title}</a>`)
-    .join(' / ');
+  qget('company-title').innerHTML =
+    '<b>At:</b> ' +
+    companies
+      .map(({ title, href }) => `<a href="${href}">${title}</a>`)
+      .join(' / ');
+  qget('duration').textContent = `(${duration})`;
+  const useLocation = false;
+  if (useLocation) {
+    qget('location').textContent = location || locations.belgrade;
+  }
+  qget('stack').innerHTML = stackHtml;
+  qget('description').innerHTML = '<b>Responsibilities:</b> ' + description;
   const logo = qget('company-logo');
   logo.style.backgroundImage = `url('assets/companies/${companyLogo}')`;
   if (companyLogoStyle) {
@@ -47,7 +51,7 @@ makeWorkExpItem({
     { title: 'CompStak', href: 'https://www.microsoft.com/en-rs/mdcs' },
   ],
   title: 'Front End Engineer',
-  bodyRight: `
+  description: `
   Maintaining and adding new features to internal tools used for parsing real estate comparables.
   Adding features to the company <a href="https://compstak.com/exchange">real estate platform🏠</a>.
   Adding and maintaing ui widgets inside of the company storybook component library.
@@ -66,8 +70,8 @@ makeWorkExpItem({
     { title: 'Team Sava', href: 'https://team-sava.com/' },
   ],
   title: 'Full Stack Developer',
-  bodyRight: `
-  Helping build the <a href="https://www.unleash.so/features">Unleash app</a> 🚀. </br>
+  description: `
+  Working on the <a href="https://www.unleash.so/features">Unleash app 🚀</a>.
   Working on Node.js microservices that integrate <a href="https://www.unleash.so/integrations">3rd party APIs</a>
   with the rest of the application infrastructure.`,
   duration: 'Feb 2022 - May 2022',
@@ -79,9 +83,9 @@ makeWorkExpItem({
 makeWorkExpItem({
   companies: [{ title: 'InsideMaps Inc', href: 'https://www.insidemaps.com/' }],
   title: 'Junior Software Engineer',
-  bodyRight: `
+  description: `
   Full stack web development, working on a React, AngularJS
-  (yes, the old one), Node.js, AWS, Typescript and MongoDB based
+  (the old one), Node.js, AWS, Typescript and MongoDB based
   infrastructure. Developing and maintaining features for
   internal tools. Responsible for maintaining logging and
   profiling logic inside these tools. Working in an agile team
@@ -96,7 +100,7 @@ makeWorkExpItem({
     { title: 'Microsoft', href: 'https://www.microsoft.com/en-rs/mdcs' },
   ],
   title: 'Software Engineer Intern',
-  bodyRight: `
+  description: `
   With the help of a mentor, added new functionality to C++/C#
   based microservices used in production by Microsoft PowerPoint.
   Communicated and adapted design decisions with colleagues from

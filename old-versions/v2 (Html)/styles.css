@@ -30,6 +30,11 @@ a:active {
   color: #4f46e5;
 }
 
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .flex {
   display: flex;
 }
@@ -47,8 +52,6 @@ a:active {
 .icon-1 {
   height: 20px;
   margin-right: 4px;
-  /* color: red; */
-  /* background-color: grey; */
 }
 
 .margin-0 {
@@ -60,8 +63,12 @@ a:active {
 }
 
 .work-exp-whole-item {
-  margin-left: 2rem;
-  margin-bottom: 1rem;
+  /* margin-left: 2rem; */
+  margin-bottom: 2rem;
+}
+
+.work-exp-whole-item > * {
+  margin-bottom: 6px;
 }
 
 .work-exp-header {
@@ -85,19 +92,10 @@ a:active {
   background-repeat: no-repeat;
 }
 
-.work-exp-body {
-  display: flex;
-  gap: 0.5rem;
+.work-exp-duration {
+  color: gray;
 }
 
-.work-exp-body-left {
-  width: 15rem;
-  flex-shrink: 0;
-  flex-grow: 0;
-  /* border: solid yellow; */
-}
-
-#section-work-experience p,
 #section-work-experience h3 {
   margin-top: 0;
   margin-bottom: 0;
@@ -114,11 +112,13 @@ a:active {
 }
 
 main > section {
-  margin-top: 2rem;
+  margin-top: 3rem;
+  border-top: 1px solid gray;
+  padding-top: 4px;
 }
 
 main > section:first-of-type {
-  margin-top: 0;
+  margin-top: 1rem;
 }
 
 .section-heading {

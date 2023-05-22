@@ -20,7 +20,7 @@
   <body style="display: flex; justify-content: center; background-color: grey">
     <div class="A4">
       <header class="flex" style="justify-content: space-between">
-        <div class="flex-col" style="align-items: center">
+        <div class="flex-col">
           <h1 class="margin-0">Matija Miličević</h1>
           <h3 style="font-weight: 600; color: gray; margin: 0">
             Software Engineer
@@ -83,14 +83,12 @@
                 </div>
                 <h3 class="work-exp-worker-title"></h3>
               </div>
-              <div class="work-exp-body">
-                <div class="work-exp-body-left">
-                  <p class="work-exp-company-title"></p>
-                  <p class="work-exp-duration"></p>
-                  <p class="work-exp-location"></p>
-                </div>
-                <p class="work-exp-body-right"></p>
+              <div style="display: flex; gap: 1rem">
+                <span class="work-exp-company-title"></span>
+                <span class="work-exp-duration"></span>
               </div>
+              <p class="work-exp-stack"></p>
+              <p class="work-exp-description"></p>
             </article>
           </template>
         </section>
@@ -112,20 +110,18 @@
               <h3>Bachelor of informatics</h3>
             </div>
             <div class="work-exp-body">
-              <div class="work-exp-body-left">
-                <div>
-                  <a href="https://www.bg.ac.rs/en/">University of Belgrade</a>
-                </div>
-                <div>
-                  <a href="http://www.matf.bg.ac.rs/eng/">
-                    Faculty of Mathematics</a
-                  >
-                </div>
-              </div>
+              <b>At:</b>
+              <span>
+                <a href="https://www.bg.ac.rs/en/">University of Belgrade</a>
+              </span>
+              (<span>
+                <a href="http://www.matf.bg.ac.rs/eng/">
+                  Faculty of Mathematics</a
+                > </span
+              >)
 
               <div>
                 <p class="margin-0">Graduated in 2023</p>
-                <p class="margin-0">Belgrade, Serbia</p>
               </div>
             </div>
           </article>
