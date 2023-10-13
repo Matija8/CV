@@ -125,3 +125,8 @@ main > section:first-of-type {
   margin-top: 0;
   margin-bottom: 1rem;
 }
+
+/* Hides skills section */
+#section-skills {
+  display: none;
+}

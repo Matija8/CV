@@ -48,7 +48,7 @@ function makeWorkExpItem({
 
 makeWorkExpItem({
   companies: [
-    { title: 'CompStak', href: 'https://www.microsoft.com/en-rs/mdcs' },
+    { title: 'CompStak', href: 'https://compstak.com/' },
   ],
   title: 'Front End Engineer',
   description: `
@@ -56,12 +56,13 @@ makeWorkExpItem({
   Adding features to the company <a href="https://compstak.com/exchange">real estate platform🏠</a>.
   Adding and maintaing ui widgets inside of the company storybook component library.
   Collaborating with colleagues to find the best solutions for complex problems.
+  Working on minor Scala backend features.
   Mentoring junior colleagues.
   `,
   duration: 'May 2022 - Current Employee',
   companyLogo: 'compstak.jpg',
   companyLogoStyle: { height: '38px' },
-  stack: 'React, TypeScript, styled-components, TanStack Query, TanStack Table',
+  stack: 'React, TypeScript, styled-components, TanStack Query, TanStack Table, Vitest, Scala, PostgreSQL',
 });
 
 makeWorkExpItem({
@@ -85,7 +86,7 @@ makeWorkExpItem({
   title: 'Junior Software Engineer',
   description: `
   Full stack web development, working on a React, AngularJS
-  (the old one), Node.js, AWS, Typescript and MongoDB based
+  (the old one), Node.js, AWS, TypeScript and MongoDB based
   infrastructure. Developing and maintaining features for
   internal tools. Responsible for maintaining logging and
   profiling logic inside these tools. Working in an agile team
