@@ -1,0 +1,17 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  /* height: min(297mm, 100vh); */
+  /* height: 297mm; */
+}
+
+.A4 {
+  width: 210mm;
+  /* Toggle border to show margins after print */
+  /* border: 1px solid black; */
+  padding: 2rem 4rem;
+
+  background-color: white;
+  min-height: 99vh;
+}

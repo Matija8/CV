@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './app.scss';
+import { CvPage } from './cvPage';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <p>Hello world</p>
-  </React.StrictMode>,
-);
+function main() {
+  ReactDOM.createRoot(document.getElementById('root')!).render(
+    <React.StrictMode>
+      <CvPage />
+    </React.StrictMode>,
+  );
+}
+
+main();
