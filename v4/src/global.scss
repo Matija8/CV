@@ -17,6 +17,7 @@ a:active {
   display: flex;
   align-items: flex-end;
   margin: 8px 0;
+  height: 16px;
 
   & > div:first-child {
     width: 24px;
@@ -26,7 +27,7 @@ a:active {
   }
 
   & img {
-    height: 16px;
+    height: 18px;
     margin-left: 2px;
   }
 

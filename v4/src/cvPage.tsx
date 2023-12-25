@@ -11,8 +11,16 @@ export function CvPage() {
       }}
     >
       {/* Full stack? Frontend? */}
-      <header id="section-header">
-        <h1>Matija Miličević - Software Engineer</h1>
+      <header id="section-header" style={{ display: 'flex' }}>
+        <div>
+          <h1 style={{ marginBottom: 8 }}>Matija Miličević</h1>
+          <span
+            style={{ fontWeight: 600, color: 'gray', margin: 0, fontSize: 20 }}
+          >
+            Software Engineer
+          </span>
+        </div>
+        <div style={{ flex: '1 0 auto' }} />
         <ul style={{ listStyle: 'none', padding: 0 }}>
           <li className="li-1">
             <div>📍</div> <B1>Location:</B1> Belgrade, Serbia
