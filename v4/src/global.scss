@@ -36,3 +36,17 @@ a:active {
     margin-right: 4px;
   }
 }
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center-align {
+  display: flex;
+  align-items: center;
+}
