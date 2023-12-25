@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './app.scss';
 import { CvPage } from './cvPage';
+import './global.scss';
 
 function main() {
   ReactDOM.createRoot(document.getElementById('root')!).render(
