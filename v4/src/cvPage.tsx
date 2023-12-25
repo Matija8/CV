@@ -15,7 +15,7 @@ export function CvPage() {
         <div>
           <h1 style={{ marginBottom: 8 }}>Matija Miličević</h1>
           <span
-            style={{ fontWeight: 600, color: 'gray', margin: 0, fontSize: 20 }}
+            style={{ fontWeight: 600, color: 'gray', margin: 0, fontSize: 18 }}
           >
             Software Engineer
           </span>
@@ -29,6 +29,11 @@ export function CvPage() {
             <div>📪</div>
             <B1>Mail:</B1>
             <a href="mailto: matijanme@gmail.com">matijanme@gmail.com</a>
+          </li>
+          <li className="li-1">
+            <div>🤳</div>
+            <B1>Phone:</B1>
+            <a href="tel:+381 64 992 5146">+381 64 992 5146</a>
           </li>
           <li className="li-1">
             <div>
@@ -45,11 +50,6 @@ export function CvPage() {
             <a href="https://www.linkedin.com/in/matija-milicevic/">
               linkedin.com/in/matija-milicevic
             </a>
-          </li>
-          <li className="li-1">
-            <div>🤳</div>
-            <B1>Phone:</B1>
-            <a href="tel:+381 64 992 5146">+381 64 992 5146</a>
           </li>
         </ul>
       </header>
