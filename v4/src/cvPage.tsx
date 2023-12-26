@@ -3,13 +3,15 @@ import { ComponentProps, ReactNode } from 'react';
 export function CvPage() {
   const content: JSX.Element = (
     <main
+      className="flex-col"
       style={{
         // A4 paper style
         backgroundColor: 'white',
         width: '210mm',
         minHeight: '100vh',
         margin: '0 auto',
-        padding: '1px 4rem 1rem',
+        padding: '1px 4rem 4rem',
+        gap: '2.5rem',
       }}
     >
       <header
@@ -138,7 +140,7 @@ export function CvPage() {
       <section id="section-education">
         <SectionTitle>Education</SectionTitle>
 
-        <article style={{ margin: 0, marginBottom: '2rem' }}>
+        <ItemWrapper>
           <ItemHeader
             logo={<img src="./companies/matf.gif" alt="" height="38px" />}
             title="Bachelor of informatics"
@@ -156,7 +158,7 @@ export function CvPage() {
             </ItemAt>
             <div>Graduated in 2023</div>
           </ItemBody>
-        </article>
+        </ItemWrapper>
       </section>
     </main>
   );
@@ -166,7 +168,7 @@ export function CvPage() {
 }
 
 const SectionTitle = (props: ComponentProps<'h2'>) => (
-  <h2 style={{ margin: '2.5rem 0 1rem' }} {...props} />
+  <h2 style={{ margin: '0' }} {...props} />
 );
 
 function LinksList() {
@@ -221,7 +223,7 @@ function WorkExpItem({
   descr: ReactNode;
 }) {
   return (
-    <article style={{ margin: 0, marginBottom: '2rem' }}>
+    <ItemWrapper>
       <ItemHeader {...{ logo, title }} />
       <ItemBody>
         <ItemAt>
@@ -238,7 +240,7 @@ function WorkExpItem({
           {descr}
         </div>
       </ItemBody>
-    </article>
+    </ItemWrapper>
   );
 }
 
@@ -262,9 +264,17 @@ function ItemHeader({ logo, title }: { logo: ReactNode; title: string }) {
   );
 }
 
+const itemSpread = 6;
+
+const ItemWrapper = (props: ComponentProps<'article'>) => (
+  <article style={{ margin: '2rem 0 0' }} {...props} />
+);
 const ItemBody = (props: ComponentProps<'div'>) => (
-  <div className="flex-col" style={{ gap: 4 }} {...props} />
+  <div className="flex-col" style={{ gap: itemSpread }} {...props} />
 );
 const ItemAt = (props: ComponentProps<'div'>) => (
-  <div style={{ display: 'flex', gap: '1rem', marginTop: '4px' }} {...props} />
+  <div
+    style={{ display: 'flex', gap: '1rem', marginTop: itemSpread }}
+    {...props}
+  />
 );
