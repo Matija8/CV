@@ -108,6 +108,28 @@ export function CvPage() {
             </>
           }
         />
+
+        <WorkExpItem
+          logo={
+            <img
+              src="./companies/microsoft.png"
+              alt="company-microsoft"
+              height="30px"
+            />
+          }
+          title="Software Engineer Intern"
+          at={<a href="https://www.microsoft.com/en-rs/mdcs">Microsoft</a>}
+          duration="Oct 2020 - Apr 2021"
+          stack="C++, Source Depot"
+          descr={
+            <>
+              With the help of a mentor, added new functionality to C++/C# based
+              microservices used in production by Microsoft PowerPoint.
+              Communicated and adapted design decisions with colleagues from
+              Sunnyvale, CA.
+            </>
+          }
+        />
       </section>
 
       <section id="section-education">
@@ -189,7 +211,7 @@ function WorkExpItem({
         {logoDiv}
         <h3 style={{ margin: 0 }}>{title}</h3>
       </div>
-      <div className="flex-col" style={{ gap: 8 }}>
+      <div className="flex-col" style={{ gap: 4 }}>
         <div style={{ display: 'flex', gap: '1rem', marginTop: '4px' }}>
           <span>
             <b>At: </b> {at}
