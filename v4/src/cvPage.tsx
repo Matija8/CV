@@ -12,13 +12,13 @@ export function CvPage() {
         padding: '1px 4rem 4rem',
       }}
     >
-      {/* Full stack? Frontend? */}
       <header id="section-header" style={{ display: 'flex', marginTop: 16 }}>
         <div>
           <h1 style={{ margin: '0 0 8px' }}>Matija Miličević</h1>
           <span
             style={{ fontWeight: 600, color: 'gray', margin: 0, fontSize: 18 }}
           >
+            {/* Full stack? Frontend? */}
             Software Engineer
           </span>
         </div>
@@ -34,7 +34,7 @@ export function CvPage() {
             <img
               src="./companies/compstak.jpg"
               alt="company-compstak"
-              height="32px"
+              height="38px"
             />
           }
           title="Front End Engineer"
@@ -60,7 +60,7 @@ export function CvPage() {
             <img
               src="./companies/unleash.jpg"
               alt="company-unleash"
-              height="33px"
+              height="32px"
             />
           }
           title="Full Stack Developer"
@@ -78,6 +78,29 @@ export function CvPage() {
               . Working on Node.js microservices that integrate{' '}
               <a href="https://www.unleash.so/integrations">3rd party APIs</a>
               with the rest of the application infrastructure.
+            </>
+          }
+        />
+
+        <WorkExpItem
+          logo={
+            <img
+              src="./companies/insidemaps.jpg"
+              alt="company-insidemaps"
+              height="40px"
+            />
+          }
+          title="Junior Software Engineer"
+          at={<a href="https://www.insidemaps.com/">InsideMaps Inc</a>}
+          duration="Apr 2021 - Feb 2022"
+          stack="React, TypeScript, Node.js, MongoDB, Elasticsearch"
+          descr={
+            <>
+              Full stack web development, working on a React, AngularJS (the old
+              one), Node.js, AWS, TypeScript and MongoDB based infrastructure.
+              Developing and maintaining features for internal tools.
+              Responsible for maintaining logging and profiling logic inside
+              these tools. Working in an agile team with 2 week sprints.
             </>
           }
         />
@@ -148,9 +171,9 @@ function WorkExpItem({
     <div
       className="flex"
       style={{
-        width: '2rem',
+        width: '40px',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
       }}
     >
       {logo}
