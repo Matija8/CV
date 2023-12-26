@@ -12,7 +12,10 @@ export function CvPage() {
         padding: '1px 4rem 1rem',
       }}
     >
-      <header id="section-header" style={{ display: 'flex', marginTop: 16 }}>
+      <header
+        id="section-header"
+        style={{ display: 'flex', marginTop: '2rem' }}
+      >
         <div>
           <h1 style={{ margin: '0 0 8px' }}>Matija Miličević</h1>
           <span
@@ -27,7 +30,7 @@ export function CvPage() {
       </header>
 
       <section id="section-work-experience">
-        <h2>Experience</h2>
+        <SectionTitle>Experience</SectionTitle>
 
         <WorkExpItem
           logo={
@@ -133,7 +136,7 @@ export function CvPage() {
       </section>
 
       <section id="section-education">
-        <h2>Education</h2>
+        <SectionTitle>Education</SectionTitle>
 
         <article style={{ margin: 0, marginBottom: '2rem' }}>
           <ItemHeader
@@ -144,9 +147,7 @@ export function CvPage() {
             <ItemAt>
               <span>
                 <b>At: </b>
-                <a href="https://www.bg.ac.rs">
-                  University of Belgrade
-                </a> ({' '}
+                <a href="https://www.bg.ac.rs">University of Belgrade</a> ({' '}
                 <a href="http://www.matf.bg.ac.rs/eng/">
                   Faculty of Mathematics
                 </a>{' '}
@@ -163,6 +164,10 @@ export function CvPage() {
     <div style={{ backgroundColor: 'grey', height: '100%' }}>{content}</div>
   );
 }
+
+const SectionTitle = (props: ComponentProps<'h2'>) => (
+  <h2 style={{ margin: '2.5rem 0 1rem' }} {...props} />
+);
 
 function LinksList() {
   return (
