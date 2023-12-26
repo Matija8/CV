@@ -22,46 +22,14 @@ export function CvPage() {
             Software Engineer
           </span>
         </div>
-        <div style={{ flex: '1 0 auto' }} />
-        <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-          <li className="li-1">
-            <div>📍</div> <b>Location:</b> Belgrade, Serbia
-          </li>
-          <li className="li-1">
-            <div>📪</div>
-            <b>Mail:</b>
-            <a href="mailto:matijanme@gmail.com">matijanme@gmail.com</a>
-          </li>
-          <li className="li-1">
-            <div>🤳</div>
-            <b>Phone:</b>
-            <a href="tel:+381 64 992 5146">+381 64 992 5146</a>
-          </li>
-          <li className="li-1">
-            <div>
-              <img src="/github.svg" alt="github" />
-            </div>
-            <b>GitHub:</b>
-            <a href="https://github.com/Matija8">github.com/Matija8</a>
-          </li>
-          <li className="li-1">
-            <div>
-              <img src="/linkedin.png" alt="linkedin" />
-            </div>
-            <b>LinkedIn:</b>
-            <a href="https://www.linkedin.com/in/matija-milicevic/">
-              linkedin.com/in/matija-milicevic
-            </a>
-          </li>
-        </ul>
+        <div /* Spacer */ style={{ flex: '1 0 auto' }} />
+        <LinksList />
       </header>
 
       <section id="section-work-experience">
         <h2>Experience</h2>
 
         <WorkExpItem
-          title="Front End Engineer"
-          at={<a href="https://compstak.com/">CompStak</a>}
           logo={
             <img
               src="./companies/compstak.jpg"
@@ -69,6 +37,8 @@ export function CvPage() {
               height="32px"
             />
           }
+          title="Front End Engineer"
+          at={<a href="https://compstak.com/">CompStak</a>}
           duration="May 2022 - Current Employee"
           stack="React, TypeScript, styled-components💅, React Query, Scala, PostgreSQL"
           descr={
@@ -84,6 +54,33 @@ export function CvPage() {
             </>
           }
         />
+
+        <WorkExpItem
+          logo={
+            <img
+              src="./companies/unleash.jpg"
+              alt="company-unleash"
+              height="33px"
+            />
+          }
+          title="Full Stack Developer"
+          at={
+            <>
+              <a href="https://www.unleash.so/">Unleash</a> {'/ '}
+              <a href="https://team-sava.com/">Team Sava</a>
+            </>
+          }
+          duration="Feb 2022 - May 2022"
+          stack="Node.js, TypeScript"
+          descr={
+            <>
+              Working on the <a href="https://www.unleash.so">Unleash app 🚀</a>
+              . Working on Node.js microservices that integrate{' '}
+              <a href="https://www.unleash.so/integrations">3rd party APIs</a>
+              with the rest of the application infrastructure.
+            </>
+          }
+        />
       </section>
 
       <section id="section-education">
@@ -96,17 +93,53 @@ export function CvPage() {
   );
 }
 
+function LinksList() {
+  return (
+    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+      <li className="li-1">
+        <div>📍</div> <b>Location:</b> Belgrade, Serbia
+      </li>
+      <li className="li-1">
+        <div>📪</div>
+        <b>Mail:</b>
+        <a href="mailto:matijanme@gmail.com">matijanme@gmail.com</a>
+      </li>
+      <li className="li-1">
+        <div>🤳</div>
+        <b>Phone:</b>
+        <a href="tel:+381 64 992 5146">+381 64 992 5146</a>
+      </li>
+      <li className="li-1">
+        <div>
+          <img src="/github.svg" alt="github" />
+        </div>
+        <b>GitHub:</b>
+        <a href="https://github.com/Matija8">github.com/Matija8</a>
+      </li>
+      <li className="li-1">
+        <div>
+          <img src="/linkedin.png" alt="linkedin" />
+        </div>
+        <b>LinkedIn:</b>
+        <a href="https://www.linkedin.com/in/matija-milicevic/">
+          linkedin.com/in/matija-milicevic
+        </a>
+      </li>
+    </ul>
+  );
+}
+
 function WorkExpItem({
+  logo,
   title,
   at,
-  logo,
   duration,
   stack,
   descr,
 }: {
+  logo: ReactNode;
   title: string;
   at: ReactNode;
-  logo: ReactNode;
   duration: string;
   stack: string;
   descr: ReactNode;
