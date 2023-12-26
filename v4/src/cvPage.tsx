@@ -43,14 +43,15 @@ export function CvPage() {
           stack="React, TypeScript, styled-components💅, React Query, Scala, PostgreSQL"
           descr={
             <>
-              Maintaining and adding new features to internal tools used for
-              parsing commercial real estate comparables. Adding features to the
-              company{' '}
+              Working on software solutions for the commercial real estate
+              industry 🏗🏢. Maintaining and adding new features to internal
+              tools used for parsing commercial real estate comparables. Adding
+              features to the company{' '}
               <a href="https://compstak.com/exchange">real estate platform🏠</a>
               . Adding and maintaing ui widgets inside of the company storybook
-              component library. Collaborating with colleagues to find the best
-              solutions for complex problems. Working on minor Scala backend
-              features. Mentoring junior colleagues.
+              component library. Collaborating with product, designers, and
+              other engineers on a daily basis, to ensure high quality. Working
+              on minor Scala backend features. Mentoring junior colleagues.
             </>
           }
         />
@@ -76,7 +77,7 @@ export function CvPage() {
             <>
               Working on the <a href="https://www.unleash.so">Unleash app 🚀</a>
               . Working on Node.js microservices that integrate{' '}
-              <a href="https://www.unleash.so/integrations">3rd party APIs</a>
+              <a href="https://www.unleash.so/integrations">3rd party APIs</a>{' '}
               with the rest of the application infrastructure.
             </>
           }
@@ -96,11 +97,14 @@ export function CvPage() {
           stack="React, TypeScript, Node.js, MongoDB, Elasticsearch"
           descr={
             <>
-              Full stack web development, working on a React, AngularJS (the old
-              one), Node.js, AWS, TypeScript and MongoDB based infrastructure.
+              Working on software solutions for the real estate industry🏘️,
+              mostly related to 3D modeling of enteriors. Full stack web
+              development, working on a React, AngularJS (
+              <a href="https://angularjs.org/">the old one 🥲</a>
+              ), Node.js, AWS, TypeScript and MongoDB based infrastructure.
               Developing and maintaining features for internal tools.
-              Responsible for maintaining logging and profiling logic inside
-              these tools. Working in an agile team with 2 week sprints.
+              Responsible for developing logging systems📊 used to track
+              operator activity. Working in an agile team with 2 week sprints.
             </>
           }
         />
