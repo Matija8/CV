@@ -13,9 +13,9 @@ export function CvPage() {
       }}
     >
       {/* Full stack? Frontend? */}
-      <header id="section-header" style={{ display: 'flex' }}>
+      <header id="section-header" style={{ display: 'flex', marginTop: 16 }}>
         <div>
-          <h1 style={{ marginBottom: 8 }}>Matija Miličević</h1>
+          <h1 style={{ margin: '0 0 8px' }}>Matija Miličević</h1>
           <span
             style={{ fontWeight: 600, color: 'gray', margin: 0, fontSize: 18 }}
           >
@@ -23,14 +23,14 @@ export function CvPage() {
           </span>
         </div>
         <div style={{ flex: '1 0 auto' }} />
-        <ul style={{ listStyle: 'none', padding: 0 }}>
+        <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
           <li className="li-1">
             <div>📍</div> <b>Location:</b> Belgrade, Serbia
           </li>
           <li className="li-1">
             <div>📪</div>
             <b>Mail:</b>
-            <a href="mailto: matijanme@gmail.com">matijanme@gmail.com</a>
+            <a href="mailto:matijanme@gmail.com">matijanme@gmail.com</a>
           </li>
           <li className="li-1">
             <div>🤳</div>
@@ -69,6 +69,20 @@ export function CvPage() {
               height="32px"
             />
           }
+          duration="May 2022 - Current Employee"
+          stack="React, TypeScript, styled-components💅, React Query, Scala, PostgreSQL"
+          descr={
+            <>
+              Maintaining and adding new features to internal tools used for
+              parsing commercial real estate comparables. Adding features to the
+              company{' '}
+              <a href="https://compstak.com/exchange">real estate platform🏠</a>
+              . Adding and maintaing ui widgets inside of the company storybook
+              component library. Collaborating with colleagues to find the best
+              solutions for complex problems. Working on minor Scala backend
+              features. Mentoring junior colleagues.
+            </>
+          }
         />
       </section>
 
@@ -86,10 +100,14 @@ function WorkExpItem({
   title,
   at,
   logo,
+  duration,
+  stack,
+  descr,
 }: {
   title: string;
   at: ReactNode;
   logo: ReactNode;
+  duration: string;
   stack: string;
   descr: ReactNode;
 }) {
@@ -111,8 +129,20 @@ function WorkExpItem({
         {logoDiv}
         <h3 style={{ margin: 0 }}>{title}</h3>
       </div>
-      <div style={{ marginTop: '4px' }}>
-        <b>At</b> {at}
+      <div className="flex-col" style={{ gap: 8 }}>
+        <div style={{ display: 'flex', gap: '1rem', marginTop: '4px' }}>
+          <span>
+            <b>At: </b> {at}
+          </span>
+          <span style={{ color: 'gray' }}>({duration})</span>
+        </div>
+        <div>
+          <b>Stack: </b> {stack}
+        </div>
+        <div>
+          <b>Responsibilities: </b>
+          {descr}
+        </div>
       </div>
     </div>
   );
