@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ComponentProps, ReactNode } from 'react';
 
 export function CvPage() {
   const content: JSX.Element = (
@@ -9,7 +9,7 @@ export function CvPage() {
         width: '210mm',
         minHeight: '100vh',
         margin: '0 auto',
-        padding: '1px 4rem 4rem',
+        padding: '1px 4rem 1rem',
       }}
     >
       <header id="section-header" style={{ display: 'flex', marginTop: 16 }}>
@@ -134,6 +134,28 @@ export function CvPage() {
 
       <section id="section-education">
         <h2>Education</h2>
+
+        <article style={{ margin: 0, marginBottom: '2rem' }}>
+          <ItemHeader
+            logo={<img src="./companies/matf.gif" alt="" height="38px" />}
+            title="Bachelor of informatics"
+          />
+          <ItemBody>
+            <ItemAt>
+              <span>
+                <b>At: </b>
+                <a href="https://www.bg.ac.rs">
+                  University of Belgrade
+                </a> ({' '}
+                <a href="http://www.matf.bg.ac.rs/eng/">
+                  Faculty of Mathematics
+                </a>{' '}
+                )
+              </span>
+            </ItemAt>
+            <div>Graduated in 2023</div>
+          </ItemBody>
+        </article>
       </section>
     </main>
   );
@@ -193,31 +215,16 @@ function WorkExpItem({
   stack: string;
   descr: ReactNode;
 }) {
-  const logoDiv = (
-    <div
-      className="flex"
-      style={{
-        width: '40px',
-        alignItems: 'center',
-        justifyContent: 'flex-start',
-      }}
-    >
-      {logo}
-    </div>
-  );
   return (
-    <div style={{ margin: 0, marginBottom: '2rem' }}>
-      <div className="flex" style={{ alignItems: 'center', gap: '8px' }}>
-        {logoDiv}
-        <h3 style={{ margin: 0 }}>{title}</h3>
-      </div>
-      <div className="flex-col" style={{ gap: 4 }}>
-        <div style={{ display: 'flex', gap: '1rem', marginTop: '4px' }}>
+    <article style={{ margin: 0, marginBottom: '2rem' }}>
+      <ItemHeader {...{ logo, title }} />
+      <ItemBody>
+        <ItemAt>
           <span>
             <b>At: </b> {at}
           </span>
           <span style={{ color: 'gray' }}>({duration})</span>
-        </div>
+        </ItemAt>
         <div>
           <b>Stack: </b> {stack}
         </div>
@@ -225,7 +232,34 @@ function WorkExpItem({
           <b>Responsibilities: </b>
           {descr}
         </div>
+      </ItemBody>
+    </article>
+  );
+}
+
+function ItemHeader({ logo, title }: { logo: ReactNode; title: string }) {
+  return (
+    <div className="flex" style={{ alignItems: 'center', gap: '8px' }}>
+      {/* Logo */}
+      <div
+        className="flex"
+        style={{
+          width: '40px',
+          alignItems: 'center',
+          justifyContent: 'flex-start',
+        }}
+      >
+        {logo}
       </div>
+      {/* Title */}
+      <h3 style={{ margin: 0 }}>{title}</h3>
     </div>
   );
 }
+
+const ItemBody = (props: ComponentProps<'div'>) => (
+  <div className="flex-col" style={{ gap: 4 }} {...props} />
+);
+const ItemAt = (props: ComponentProps<'div'>) => (
+  <div style={{ display: 'flex', gap: '1rem', marginTop: '4px' }} {...props} />
+);
