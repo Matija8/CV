@@ -62,6 +62,7 @@ export function CvPage() {
               on minor Scala backend features. Mentoring junior colleagues.
             </>
           }
+          iwMargin="0.5rem 0 0"
         />
 
         <WorkExpItem
@@ -221,6 +222,7 @@ function WorkExpItem({
   duration,
   stack,
   descr,
+  iwMargin,
 }: {
   logo: ReactNode;
   title: string;
@@ -228,9 +230,10 @@ function WorkExpItem({
   duration: string;
   stack: string;
   descr: ReactNode | null;
+  iwMargin?: string;
 }) {
   return (
-    <ItemWrapper>
+    <ItemWrapper margin={iwMargin}>
       <ItemHeader {...{ logo, title }} />
       <ItemBody>
         <ItemAt>
@@ -277,9 +280,9 @@ function ItemHeader({ logo, title }: { logo: ReactNode; title: string }) {
 
 const itemSpread = 6;
 
-const ItemWrapper = (props: ComponentProps<'article'>) => (
-  <article style={{ margin: '2rem 0 0' }} {...props} />
-);
+const ItemWrapper = (
+  props: ComponentProps<'article'> & { margin?: string },
+) => <article style={{ margin: props.margin ?? '2rem 0 0' }} {...props} />;
 const ItemBody = (props: ComponentProps<'div'>) => (
   <div className="flex-col" style={{ gap: itemSpread }} {...props} />
 );
