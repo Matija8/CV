@@ -35,16 +35,19 @@ export function CvPage() {
         <SectionTitle>Experience</SectionTitle>
 
         <WorkExpItem
-          logo={
-            <img
-              src="./companies/compstak.jpg"
-              alt="company-compstak"
-              height="38px"
-            />
-          }
-          title="Front End Engineer"
+          logo={<CsLogo />}
+          title="Senior Front-End Engineer"
           at={<a href="https://compstak.com/">CompStak</a>}
-          duration="May 2022 - Current Employee"
+          duration="Jan 2024 - Current Employee"
+          stack=""
+          descr={null}
+        />
+
+        <WorkExpItem
+          logo={<CsLogo />}
+          title="Front-End Engineer"
+          at={<a href="https://compstak.com/">CompStak</a>}
+          duration="May 2022 - Jan 2024"
           stack="React, TypeScript, styled-components💅, React Query, Scala, PostgreSQL"
           descr={
             <>
@@ -167,6 +170,10 @@ export function CvPage() {
   );
 }
 
+const CsLogo = () => (
+  <img src="./companies/compstak.jpg" alt="company-compstak" height="38px" />
+);
+
 const SectionTitle = (props: ComponentProps<'h2'>) => (
   <h2 style={{ margin: '0' }} {...props} />
 );
@@ -220,7 +227,7 @@ function WorkExpItem({
   at: ReactNode;
   duration: string;
   stack: string;
-  descr: ReactNode;
+  descr: ReactNode | null;
 }) {
   return (
     <ItemWrapper>
@@ -232,13 +239,17 @@ function WorkExpItem({
           </span>
           <span style={{ color: 'gray' }}>({duration})</span>
         </ItemAt>
-        <div>
-          <b>Stack: </b> {stack}
-        </div>
-        <div>
-          <b>Responsibilities: </b>
-          {descr}
-        </div>
+        {!!stack && (
+          <div>
+            <b>Stack: </b> {stack}
+          </div>
+        )}
+        {!!descr && (
+          <div>
+            <b>Responsibilities: </b>
+            {descr}
+          </div>
+        )}
       </ItemBody>
     </ItemWrapper>
   );
