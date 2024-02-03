@@ -31,8 +31,6 @@ export function CvPage() {
       </header>
 
       <section id="section-work-experience">
-        <SectionTitle>Experience</SectionTitle>
-
         <WorkExpItem
           logo={<CsLogo />}
           title="Senior Front-End Engineer"
@@ -40,6 +38,7 @@ export function CvPage() {
           duration="Jan 2024 - Current Employee"
           stack=""
           descr={null}
+          marginTop="0"
         />
 
         <WorkExpItem
@@ -61,6 +60,7 @@ export function CvPage() {
               on minor Scala backend features. Mentoring junior colleagues.
             </>
           }
+          marginTop="1rem"
         />
 
         <WorkExpItem
@@ -142,7 +142,7 @@ export function CvPage() {
       <section id="section-education" style={{ marginTop: '3rem' }}>
         <SectionTitle>Education</SectionTitle>
 
-        <ItemWrapper>
+        <ItemWrapper marginTop="1rem">
           <ItemHeader
             logo={<img src="./companies/matf.gif" alt="" height="38px" />}
             title={
@@ -157,7 +157,7 @@ export function CvPage() {
             }
           />
           <ItemBody>
-            <div style={{ color: 'gray' }}>Graduated in 2023</div>
+            <Duration>Graduated in 2023</Duration>
           </ItemBody>
         </ItemWrapper>
       </section>
@@ -219,7 +219,7 @@ function WorkExpItem({
   duration,
   stack,
   descr,
-  margin,
+  marginTop: marginTop,
 }: {
   logo: ReactNode;
   title: string;
@@ -227,10 +227,10 @@ function WorkExpItem({
   duration: string;
   stack: string;
   descr: ReactNode | null;
-  margin?: string;
+  marginTop?: string;
 }) {
   return (
-    <ItemWrapper margin={margin}>
+    <ItemWrapper {...{ marginTop }}>
       <div style={{ display: 'flex', marginBottom: 4 }}>
         <ItemHeader
           {...{
@@ -244,7 +244,7 @@ function WorkExpItem({
         />
       </div>
       <ItemBody>
-        <div style={{ color: 'gray' }}>{duration}</div>
+        <Duration>{duration}</Duration>
         {!!stack && (
           <div>
             <b>Stack: </b> {stack}
@@ -283,11 +283,14 @@ function ItemHeader({ logo, title }: { logo: ReactNode; title: ReactNode }) {
   );
 }
 
-const itemSpread = 6;
-
 const ItemWrapper = (
-  props: ComponentProps<'article'> & { margin?: string },
-) => <article style={{ margin: props.margin ?? '2rem 0 0' }} {...props} />;
+  props: ComponentProps<'article'> & { marginTop?: string },
+) => <article style={{ marginTop: props.marginTop ?? '2rem' }} {...props} />;
+
 const ItemBody = (props: ComponentProps<'div'>) => (
-  <div className="flex-col" style={{ gap: itemSpread }} {...props} />
+  <div className="flex-col" style={{ gap: 6 }} {...props} />
+);
+
+const Duration = (props: ComponentProps<'div'>) => (
+  <div style={{ color: 'gray' }} {...props} />
 );
