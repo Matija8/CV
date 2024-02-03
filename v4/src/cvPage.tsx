@@ -11,7 +11,6 @@ export function CvPage() {
         minHeight: '100vh',
         margin: '0 auto',
         padding: '1px 4rem 4rem',
-        gap: '2.5rem',
       }}
     >
       <header
@@ -62,7 +61,6 @@ export function CvPage() {
               on minor Scala backend features. Mentoring junior colleagues.
             </>
           }
-          iwMargin="0.5rem 0 0"
         />
 
         <WorkExpItem
@@ -141,26 +139,25 @@ export function CvPage() {
         />
       </section>
 
-      <section id="section-education">
+      <section id="section-education" style={{ marginTop: '3rem' }}>
         <SectionTitle>Education</SectionTitle>
 
         <ItemWrapper>
           <ItemHeader
             logo={<img src="./companies/matf.gif" alt="" height="38px" />}
-            title="Bachelor of informatics"
-          />
-          <ItemBody>
-            <ItemAt>
-              <span>
-                <b>At: </b>
+            title={
+              <>
+                Bachelor of informatics at{' '}
                 <a href="https://www.bg.ac.rs">University of Belgrade</a> ({' '}
                 <a href="http://www.matf.bg.ac.rs/eng/">
                   Faculty of Mathematics
                 </a>{' '}
                 )
-              </span>
-            </ItemAt>
-            <div>Graduated in 2023</div>
+              </>
+            }
+          />
+          <ItemBody>
+            <div style={{ color: 'gray' }}>Graduated in 2023</div>
           </ItemBody>
         </ItemWrapper>
       </section>
@@ -222,7 +219,7 @@ function WorkExpItem({
   duration,
   stack,
   descr,
-  iwMargin,
+  margin,
 }: {
   logo: ReactNode;
   title: string;
@@ -230,18 +227,24 @@ function WorkExpItem({
   duration: string;
   stack: string;
   descr: ReactNode | null;
-  iwMargin?: string;
+  margin?: string;
 }) {
   return (
-    <ItemWrapper margin={iwMargin}>
-      <ItemHeader {...{ logo, title }} />
+    <ItemWrapper margin={margin}>
+      <div style={{ display: 'flex', marginBottom: 4 }}>
+        <ItemHeader
+          {...{
+            logo,
+            title: (
+              <>
+                {title} at {at}
+              </>
+            ),
+          }}
+        />
+      </div>
       <ItemBody>
-        <ItemAt>
-          <span>
-            <b>At: </b> {at}
-          </span>
-          <span style={{ color: 'gray' }}>({duration})</span>
-        </ItemAt>
+        <div style={{ color: 'gray' }}>{duration}</div>
         {!!stack && (
           <div>
             <b>Stack: </b> {stack}
@@ -258,7 +261,7 @@ function WorkExpItem({
   );
 }
 
-function ItemHeader({ logo, title }: { logo: ReactNode; title: string }) {
+function ItemHeader({ logo, title }: { logo: ReactNode; title: ReactNode }) {
   return (
     <div className="flex" style={{ alignItems: 'center', gap: '8px' }}>
       {/* Logo */}
@@ -272,8 +275,10 @@ function ItemHeader({ logo, title }: { logo: ReactNode; title: string }) {
       >
         {logo}
       </div>
-      {/* Title */}
-      <h3 style={{ margin: 0 }}>{title}</h3>
+      <div className="flex" style={{ alignItems: 'baseline', gap: 8 }}>
+        {/* Title */}
+        <h3 style={{ margin: 0 }}>{title}</h3>
+      </div>
     </div>
   );
 }
@@ -285,10 +290,4 @@ const ItemWrapper = (
 ) => <article style={{ margin: props.margin ?? '2rem 0 0' }} {...props} />;
 const ItemBody = (props: ComponentProps<'div'>) => (
   <div className="flex-col" style={{ gap: itemSpread }} {...props} />
-);
-const ItemAt = (props: ComponentProps<'div'>) => (
-  <div
-    style={{ display: 'flex', gap: '1rem', marginTop: itemSpread }}
-    {...props}
-  />
 );
