@@ -1,18 +1,10 @@
 import { ComponentProps, ReactNode } from 'react';
 
+const TO_PRINT = false;
+
 export function CvPage() {
-  const content: JSX.Element = (
-    <main
-      className="flex-col"
-      style={{
-        // A4 paper style
-        backgroundColor: 'white',
-        width: '210mm',
-        minHeight: '100vh',
-        margin: '0 auto',
-        padding: '1px 4rem 4rem',
-      }}
-    >
+  const page1 = (
+    <A4Page>
       <header
         id="section-header"
         style={{ display: 'flex', marginTop: '2rem' }}
@@ -20,7 +12,12 @@ export function CvPage() {
         <div>
           <h1 style={{ margin: '0 0 8px' }}>Matija Miličević</h1>
           <span
-            style={{ fontWeight: 600, color: 'gray', margin: 0, fontSize: 18 }}
+            style={{
+              fontWeight: 600,
+              color: 'gray',
+              margin: 0,
+              fontSize: 18,
+            }}
           >
             {/* Full stack? Frontend? */}
             Software Engineer
@@ -31,6 +28,8 @@ export function CvPage() {
       </header>
 
       <section id="section-work-experience">
+        <SectionTitle>Experience</SectionTitle>
+
         <WorkExpItem
           logo={<CsLogo />}
           title="Senior Front-End Engineer"
@@ -138,7 +137,11 @@ export function CvPage() {
           }
         />
       </section>
+    </A4Page>
+  );
 
+  const page2 = (
+    <A4Page>
       <section id="section-education" style={{ marginTop: '3rem' }}>
         <SectionTitle>Education</SectionTitle>
 
@@ -161,20 +164,49 @@ export function CvPage() {
           </ItemBody>
         </ItemWrapper>
       </section>
-    </main>
+    </A4Page>
   );
+
   return (
-    <div style={{ backgroundColor: 'grey', height: '100%' }}>{content}</div>
+    <div
+      className="flex-col"
+      style={{
+        backgroundColor: TO_PRINT ? 'white' : 'grey',
+        height: '100%',
+        gap: TO_PRINT ? '0' : '4px',
+      }}
+    >
+      {page1}
+      {page2}
+    </div>
   );
 }
 
-const CsLogo = () => (
-  <img src="./companies/compstak.jpg" alt="company-compstak" height="38px" />
-);
+function A4Page(props: ComponentProps<'div'>) {
+  return (
+    <div
+      {...props}
+      className="flex-col"
+      style={{
+        backgroundColor: 'white',
+        width: '210mm',
+        height: '297mm',
+        margin: '0 auto',
+        padding: '1px 4rem 4rem',
+      }}
+    />
+  );
+}
 
-const SectionTitle = (props: ComponentProps<'h2'>) => (
-  <h2 style={{ margin: '0' }} {...props} />
-);
+function CsLogo() {
+  return (
+    <img src="./companies/compstak.jpg" alt="company-compstak" height="38px" />
+  );
+}
+
+function SectionTitle(props: ComponentProps<'h2'>) {
+  return <h2 style={{ margin: '0 0 32px' }} {...props} />;
+}
 
 function LinksList() {
   return (
@@ -283,14 +315,18 @@ function ItemHeader({ logo, title }: { logo: ReactNode; title: ReactNode }) {
   );
 }
 
-const ItemWrapper = (
+function ItemWrapper(
   props: ComponentProps<'article'> & { marginTop?: string },
-) => <article style={{ marginTop: props.marginTop ?? '2rem' }} {...props} />;
+) {
+  return (
+    <article style={{ marginTop: props.marginTop ?? '3rem' }} {...props} />
+  );
+}
 
-const ItemBody = (props: ComponentProps<'div'>) => (
-  <div className="flex-col" style={{ gap: 6 }} {...props} />
-);
+function ItemBody(props: ComponentProps<'div'>) {
+  return <div className="flex-col" style={{ gap: 6 }} {...props} />;
+}
 
-const Duration = (props: ComponentProps<'div'>) => (
-  <div style={{ color: 'gray' }} {...props} />
-);
+function Duration(props: ComponentProps<'div'>) {
+  return <div style={{ color: 'gray' }} {...props} />;
+}
