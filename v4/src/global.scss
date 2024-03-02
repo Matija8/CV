@@ -1,9 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Roboto, sans-serif;
   padding: 0;
   margin: 0;
-  /* height: min(297mm, 100vh); */
-  /* height: 297mm; */
 }
 
 a,
@@ -13,16 +15,29 @@ a:active {
   color: #4f46e5;
 }
 
+@page {
+  // https://stackoverflow.com/questions/16649943/css-to-set-a4-paper-size
+  // Not sure if this is needed.
+  size: A4;
+  margin: 0;
+}
+
 .A4-page-outer {
   width: 100%;
   height: 297mm;
   background-color: grey;
   border: none;
   outline: none;
-}
+  padding: 0;
+  margin: 0;
 
-.A4-page-outer:nth-child(even) {
-  background-color: lightgrey;
+  > * {
+    border-bottom: 1px solid grey;
+  }
+
+  &:nth-child(even) {
+    background-color: lightgrey;
+  }
 }
 
 .li-1 {

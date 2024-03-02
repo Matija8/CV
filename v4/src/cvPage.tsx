@@ -181,10 +181,10 @@ function A4Page(props: ComponentProps<'div'>) {
         className="flex-col"
         style={{
           backgroundColor: 'white',
+          height: '100%',
           width: '210mm',
-          height: '297mm',
           margin: '0 auto',
-          padding: '0px 4rem 4rem',
+          padding: '0px 2rem',
         }}
       />
     </div>
@@ -198,7 +198,7 @@ function CsLogo() {
 }
 
 function SectionTitle(props: ComponentProps<'h2'>) {
-  return <h2 style={{ margin: '0 0 32px' }} {...props} />;
+  return <h2 style={{ margin: '0 0 2rem' }} {...props} />;
 }
 
 function LinksList() {
