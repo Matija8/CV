@@ -1,6 +1,5 @@
 import { ComponentProps, ReactNode } from 'react';
-
-const TO_PRINT = false;
+import { TO_PRINT } from './featureFlags';
 
 export function CvPage() {
   const page1 = (
@@ -59,7 +58,7 @@ export function CvPage() {
               on minor Scala backend features. Mentoring junior colleagues.
             </>
           }
-          marginTop="1rem"
+          marginTop="4px"
         />
 
         <WorkExpItem
