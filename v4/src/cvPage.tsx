@@ -1,5 +1,4 @@
 import { ComponentProps, ReactNode } from 'react';
-import { TO_PRINT } from './featureFlags';
 
 export function CvPage() {
   const page1 = (
@@ -167,33 +166,28 @@ export function CvPage() {
   );
 
   return (
-    <div
-      className="flex-col"
-      style={{
-        backgroundColor: TO_PRINT ? 'white' : 'grey',
-        height: '100%',
-        gap: TO_PRINT ? '0' : '4px',
-      }}
-    >
+    <>
       {page1}
       {page2}
-    </div>
+    </>
   );
 }
 
 function A4Page(props: ComponentProps<'div'>) {
   return (
-    <div
-      {...props}
-      className="flex-col"
-      style={{
-        backgroundColor: 'white',
-        width: '210mm',
-        height: '297mm',
-        margin: '0 auto',
-        padding: '1px 4rem 4rem',
-      }}
-    />
+    <div className="A4-page-outer">
+      <div
+        {...props}
+        className="flex-col"
+        style={{
+          backgroundColor: 'white',
+          width: '210mm',
+          height: '297mm',
+          margin: '0 auto',
+          padding: '0px 4rem 4rem',
+        }}
+      />
+    </div>
   );
 }
 
