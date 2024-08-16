@@ -51,10 +51,11 @@ export function CvPage() {
               tools used for parsing commercial real estate comparables. Adding
               features to the company{' '}
               <a href="https://compstak.com/exchange">real estate platform🏠</a>
-              . Adding and maintaing ui widgets inside of the company storybook
-              component library. Collaborating with product, designers, and
-              other engineers on a daily basis, to ensure high quality. Working
-              on minor Scala backend features. Mentoring junior colleagues.
+              . Adding and maintaining ui widgets inside of the company
+              storybook component library. Collaborating with product,
+              designers, and other engineers on a daily basis, to ensure high
+              quality. Working on minor Scala backend features. Mentoring junior
+              colleagues.
             </>
           }
           marginTop="4px"
