@@ -48,7 +48,7 @@ export function CvPage() {
             <>
               Working on software solutions for the commercial real estate
               industry 🏗🏢. Maintaining and adding new features to internal
-              tools used for parsing commercial real estate comparables. Adding
+              tools used for parsing commercial real estate data. Adding
               features to the company{' '}
               <a href="https://compstak.com/exchange">real estate platform🏠</a>
               . Adding and maintaining ui widgets inside of the company
@@ -105,11 +105,11 @@ export function CvPage() {
               Working on software solutions for the real estate industry🏘️,
               mostly related to 3D modeling of enteriors. Full stack web
               development, working on a React, AngularJS (
-              <a href="https://angularjs.org/">the old one 🥲</a>
+              <a href="https://angularjs.org/">the old one</a>
               ), Node.js, AWS, TypeScript and MongoDB based infrastructure.
               Developing and maintaining features for internal tools.
               Responsible for developing logging systems📊 used to track
-              operator activity. Working in an agile team with 2 week sprints.
+              operator activity.
             </>
           }
         />
@@ -136,12 +136,8 @@ export function CvPage() {
           }
         />
       </section>
-    </A4Page>
-  );
 
-  const page2 = (
-    <A4Page>
-      <section id="section-education" style={{ marginTop: '3rem' }}>
+      <section id="section-education" style={{ marginTop: '2rem' }}>
         <SectionTitle>Education</SectionTitle>
 
         <ItemWrapper marginTop="1rem">
@@ -158,18 +154,19 @@ export function CvPage() {
               </>
             }
           />
-          <ItemBody>
-            <Duration>Graduated in 2023</Duration>
-          </ItemBody>
         </ItemWrapper>
       </section>
     </A4Page>
   );
 
+  const page2 = (
+    <A4Page>{/* If you want a second page add stuff here */}</A4Page>
+  );
+
   return (
     <>
       {page1}
-      {page2}
+      {false && page2}
     </>
   );
 }
@@ -185,7 +182,7 @@ function A4Page(props: ComponentProps<'div'>) {
           height: '100%',
           width: '210mm',
           margin: '0 auto',
-          padding: '0px 2rem',
+          padding: '0px 2rem 2rem',
         }}
       />
     </div>
@@ -199,7 +196,7 @@ function CsLogo() {
 }
 
 function SectionTitle(props: ComponentProps<'h2'>) {
-  return <h2 style={{ margin: '0 0 2rem' }} {...props} />;
+  return <h2 style={{ margin: '1rem 0 1rem' }} {...props} />;
 }
 
 function LinksList() {
@@ -213,11 +210,13 @@ function LinksList() {
         <b>Mail:</b>
         <a href="mailto:matijanme@gmail.com">matijanme@gmail.com</a>
       </li>
-      <li className="li-1">
-        <div>🤳</div>
-        <b>Phone:</b>
-        <a href="tel:+381 64 992 5146">+381 64 992 5146</a>
-      </li>
+      {false && (
+        <li className="li-1">
+          <div>🤳</div>
+          <b>Phone:</b>
+          <a href="tel:+381 64 992 5146">+381 64 992 5146</a>
+        </li>
+      )}
       <li className="li-1">
         <div>
           <img src="/github.svg" alt="github" />
@@ -318,7 +317,7 @@ function ItemWrapper(
 }
 
 function ItemBody(props: ComponentProps<'div'>) {
-  return <div className="flex-col" style={{ gap: 6 }} {...props} />;
+  return <div className="flex-col" style={{ gap: 4 }} {...props} />;
 }
 
 function Duration(props: ComponentProps<'div'>) {
