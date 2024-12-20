@@ -138,7 +138,11 @@ export function CvPage() {
           }
         />
       </section>
+    </A4Page>
+  );
 
+  const page2 = (
+    <A4Page>
       <section id="section-education" style={{ marginTop: '2rem' }}>
         <SectionTitle>Education</SectionTitle>
 
@@ -161,14 +165,10 @@ export function CvPage() {
     </A4Page>
   );
 
-  const page2 = (
-    <A4Page>{/* If you want a second page add stuff here */}</A4Page>
-  );
-
   return (
     <>
       {page1}
-      {false && page2}
+      {page2}
     </>
   );
 }
@@ -198,7 +198,7 @@ function CsLogo() {
 }
 
 function SectionTitle(props: ComponentProps<'h2'>) {
-  return <h2 style={{ margin: '1rem 0 1rem' }} {...props} />;
+  return <h2 style={{ margin: '1rem 0 2rem' }} {...props} />;
 }
 
 function LinksList() {
