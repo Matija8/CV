@@ -104,12 +104,14 @@ export function CvPage() {
             <>
               Working on software solutions for the real estate industry🏘️,
               mostly related to 3D modeling of interiors. Full stack web
-              development, working on a React, AngularJS (
+              development, working on a React,{' '}
+              {/* AngularJS (
               <a href="https://angularjs.org/">the old one</a>
-              ), Node.js, AWS, TypeScript and MongoDB based infrastructure.
+              ),  */}
+              Node.js, AWS, TypeScript and MongoDB based infrastructure.
               Developing and maintaining features for internal tools.
-              Responsible for developing logging systems📊 used to track
-              operator activity.
+              Responsible for developing logging systems used to track operator
+              activity 📊.
             </>
           }
         />
