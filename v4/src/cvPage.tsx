@@ -17,8 +17,7 @@ export function CvPage() {
               fontSize: 18,
             }}
           >
-            {/* Full stack? Frontend? */}
-            Software Engineer
+            Senior Frontend Engineer
           </span>
         </div>
         <div /* Spacer */ style={{ flex: '1 0 auto' }} />
@@ -32,14 +31,15 @@ export function CvPage() {
           logo={<CsLogo />}
           title="Senior Front-End Engineer"
           at={<a href="https://compstak.com/">CompStak</a>}
-          duration="Jan 2024 - Current Employee"
-          stack="React, TypeScript, Meteor, PostgreSQL, MongoDB, Claude.ai, Cursor"
+          duration="Jan 2024 – Present"
+          stack="React, TypeScript, Meteor, PostgreSQL, MongoDB"
           descr={
             <>
-              Working mostly on internal tools for the{' '}
-              <a href="https://compstak.com">CompStak</a> platform. Main
-              codebase I work on is a React + Meteor + MongoDB + PostgreSQL
-              based application.
+              Build and maintain internal tools for the{' '}
+              <a href="https://compstak.com">CompStak</a> platform. The main
+              codebase is a React, Meteor, MongoDB, and PostgreSQL application.
+              Use <a href="https://claude.ai">Claude.ai</a> and{' '}
+              <a href="https://cursor.com">Cursor</a> to ship that work faster.
             </>
           }
         />
@@ -48,19 +48,17 @@ export function CvPage() {
           logo={<CsLogo />}
           title="Front-End Engineer"
           at={<a href="https://compstak.com/">CompStak</a>}
-          duration="May 2022 - Jan 2024"
-          stack="React, TypeScript, styled-components💅, React Query, Scala, PostgreSQL"
+          duration="May 2022 – Jan 2024"
+          stack="React, TypeScript, styled-components, TanStack Query, Scala, PostgreSQL"
           descr={
             <>
-              Working on software solutions for the commercial real estate
-              industry 🏗🏢. Maintaining and adding new features to internal
-              tools used for parsing commercial real estate data. Adding
-              features to the company{' '}
-              <a href="https://compstak.com/exchange">real estate platform🏠</a>
-              . Adding and maintaining ui widgets inside of the company
-              storybook component library. Collaborating with product,
-              designers, and other engineers on a daily basis, to ensure high
-              quality. Working on minor Scala backend features. Mentoring junior
+              Built software for the commercial real estate industry. Maintained
+              internal tools used to parse commercial real estate data, and
+              added features to the{' '}
+              <a href="https://compstak.com/exchange">CompStak exchange</a>.
+              Added and maintained UI widgets in the company Storybook.
+              Collaborated daily with product managers, designers, and other
+              engineers. Worked on Scala backend features and mentored junior
               colleagues.
             </>
           }
@@ -77,20 +75,14 @@ export function CvPage() {
           title="Full Stack Developer"
           at={
             <>
-              <a href="https://www.unleash.so/">Unleash</a> {'/ '}
-              <a href="https://team-sava.com/">Team Sava</a>
+              <a href="https://www.unleash.so/">Unleash</a>{' (via '}
+              <a href="https://team-sava.com/">Team Sava</a>{'), later acquired by '}
+              <a href="https://www.zendesk.com/">Zendesk</a>
             </>
           }
-          duration="Feb 2022 - May 2022"
+          duration="Feb 2022 – May 2022"
           stack="Node.js, TypeScript"
-          descr={
-            <>
-              Working on the <a href="https://www.unleash.so">Unleash app 🚀</a>
-              . Working on Node.js microservices that integrate{' '}
-              <a href="https://www.unleash.so/integrations">3rd party APIs</a>{' '}
-              with the rest of the application infrastructure.
-            </>
-          }
+          descr="Built Node.js microservices for the Unleash app that integrate third-party APIs with the rest of the application."
         />
 
         <WorkExpItem
@@ -103,20 +95,14 @@ export function CvPage() {
           }
           title="Junior Software Engineer"
           at={<a href="https://www.insidemaps.com/">InsideMaps Inc</a>}
-          duration="Apr 2021 - Feb 2022"
+          duration="Apr 2021 – Feb 2022"
           stack="React, TypeScript, Node.js, MongoDB, Elasticsearch"
           descr={
             <>
-              Working on software solutions for the real estate industry🏘️,
-              mostly related to 3D modeling of interiors. Full stack web
-              development, working on a React,{' '}
-              {/* AngularJS (
-              <a href="https://angularjs.org/">the old one</a>
-              ),  */}
-              Node.js, AWS, TypeScript and MongoDB based infrastructure.
-              Developing and maintaining features for internal tools.
-              Responsible for developing logging systems used to track operator
-              activity 📊.
+              Built software for the real estate industry, mostly for 3D
+              modeling of interiors. Developed full-stack features on a React,
+              Node.js, AWS, TypeScript, and MongoDB stack, including logging
+              systems that track operator activity.
             </>
           }
         />
@@ -140,18 +126,36 @@ export function CvPage() {
           }
           title="Software Engineer Intern"
           at={<a href="https://www.microsoft.com/en-rs/mdcs">Microsoft</a>}
-          duration="Oct 2020 - Apr 2021"
-          stack="C++, Source Depot"
+          duration="Oct 2020 – Apr 2021"
+          stack="C++, C#, Source Depot"
           descr={
             <>
-              With the help of a mentor, added new functionality to C++/C# based
-              microservices used in production by Microsoft PowerPoint.
-              Communicated and adapted design decisions with colleagues from
-              Sunnyvale, CA.
+              With a mentor, added functionality to C++ and C# microservices
+              used in production by Microsoft PowerPoint. Aligned design
+              decisions with colleagues in Sunnyvale, CA.
             </>
           }
           marginTop="0"
         />
+      </section>
+
+      <section id="section-skills" style={{ marginTop: '3rem' }}>
+        <SectionTitle>Skills</SectionTitle>
+        <ItemWrapper marginTop="1rem">
+          <ItemBody>
+            <div>
+              <b>Languages: </b> TypeScript, JavaScript, Scala, C++, C#
+            </div>
+            <div>
+              <b>Frontend: </b> React, Meteor, styled-components, TanStack Query,
+              Storybook
+            </div>
+            <div>
+              <b>Backend and data: </b> Node.js, PostgreSQL, MongoDB,
+              Elasticsearch, AWS
+            </div>
+          </ItemBody>
+        </ItemWrapper>
       </section>
 
       <section id="section-education" style={{ marginTop: '3rem' }}>
@@ -162,15 +166,15 @@ export function CvPage() {
             logo={<img src="./companies/matf.gif" alt="" height="38px" />}
             title={
               <>
-                Bachelor of informatics at{' '}
-                <a href="https://www.bg.ac.rs">University of Belgrade</a> ({' '}
-                <a href="http://www.matf.bg.ac.rs/eng/">
-                  Faculty of Mathematics
-                </a>{' '}
-                )
+                Bachelor of Informatics,{' '}
+                <a href="http://www.matf.bg.ac.rs/eng/">Faculty of Mathematics</a>{', '}
+                <a href="https://www.bg.ac.rs">University of Belgrade</a>
               </>
             }
           />
+          <ItemBody>
+            <Duration>Graduated in February 2023</Duration>
+          </ItemBody>
         </ItemWrapper>
       </section>
     </A4Page>
@@ -220,7 +224,7 @@ function LinksList() {
       </li>
       <li className="li-1">
         <div>📪</div>
-        <b>Mail:</b>
+        <b>Email:</b>
         <a href="mailto:matijanme@gmail.com">matijanme@gmail.com</a>
       </li>
       {false && (
