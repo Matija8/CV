@@ -33,8 +33,17 @@ export function CvPage() {
           title="Senior Front-End Engineer"
           at={<a href="https://compstak.com/">CompStak</a>}
           duration="Jan 2024 - Current Employee"
-          stack=""
-          descr={null}
+          stack="React, TypeScript, Meteor, PostgreSQL, MongoDB, Claude.ai, Cursor"
+          descr={
+            <>
+              <p>
+                Working mostly on internal tools for the{' '}
+                <a href="https://compstak.com">CompStak</a> platform. Main
+                codebase I work on is a React + Meteor + MongoDB + PostgreSQL
+                based application.
+              </p>
+            </>
+          }
           marginTop="0"
         />
 
