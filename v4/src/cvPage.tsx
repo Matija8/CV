@@ -29,7 +29,7 @@ export function CvPage() {
 
         <WorkExpItem
           logo={<CsLogo />}
-          title="Senior Front-End Engineer"
+          title="Senior Frontend Engineer"
           at={<a href="https://compstak.com/">CompStak</a>}
           duration="Jan 2024 – Present"
           stack="React, TypeScript, Meteor, PostgreSQL, MongoDB"
@@ -46,7 +46,7 @@ export function CvPage() {
 
         <WorkExpItem
           logo={<CsLogo />}
-          title="Front-End Engineer"
+          title="Frontend Engineer"
           at={<a href="https://compstak.com/">CompStak</a>}
           duration="May 2022 – Jan 2024"
           stack="React, TypeScript, styled-components, TanStack Query, Scala, PostgreSQL"
@@ -75,8 +75,10 @@ export function CvPage() {
           title="Full Stack Developer"
           at={
             <>
-              <a href="https://www.unleash.so/">Unleash</a>{' (via '}
-              <a href="https://team-sava.com/">Team Sava</a>{'), later acquired by '}
+              <a href="https://www.unleash.so/">Unleash</a>
+              {' (via '}
+              <a href="https://team-sava.com/">Team Sava</a>
+              {'), later acquired by '}
               <a href="https://www.zendesk.com/">Zendesk</a>
             </>
           }
@@ -100,7 +102,7 @@ export function CvPage() {
           descr={
             <>
               Built software for the real estate industry, mostly for 3D
-              modeling of interiors. Developed full-stack features on a React,
+              modeling of interiors. Developed full stack features on a React,
               Node.js, AWS, TypeScript, and MongoDB stack, including logging
               systems that track operator activity.
             </>
@@ -144,15 +146,30 @@ export function CvPage() {
         <ItemWrapper marginTop="1rem">
           <ItemBody>
             <div>
-              <b>Languages: </b> TypeScript, JavaScript, Scala, C++, C#
+              <b>Languages: </b>{' '}
+              <a href="https://www.typescriptlang.org/">TypeScript</a>,{' '}
+              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+                JavaScript
+              </a>
+              {', '}
+              <a href="https://www.python.org/">Python</a>,{' '}
+              <a href="https://isocpp.org/">C++</a>
             </div>
             <div>
-              <b>Frontend: </b> React, Meteor, styled-components, TanStack Query,
-              Storybook
+              <b>Frontend: </b> <a href="https://react.dev/">React</a>,{' '}
+              <a href="https://www.meteor.com/">Meteor</a>,{' '}
+              <a href="https://tanstack.com/query">TanStack Query</a>,{' '}
+              <a href="https://storybook.js.org/">Storybook</a>
             </div>
             <div>
-              <b>Backend and data: </b> Node.js, PostgreSQL, MongoDB,
-              Elasticsearch, AWS
+              <b>Backend and data: </b>{' '}
+              <a href="https://nodejs.org/">Node.js</a>,{' '}
+              <a href="https://www.postgresql.org/">PostgreSQL</a>,{' '}
+              <a href="https://www.mongodb.com/">MongoDB</a>
+            </div>
+            <div>
+              <b>AI tools: </b> <a href="https://claude.ai">Claude.ai</a>,{' '}
+              <a href="https://cursor.com">Cursor</a>
             </div>
           </ItemBody>
         </ItemWrapper>
@@ -167,7 +184,10 @@ export function CvPage() {
             title={
               <>
                 Bachelor of Informatics,{' '}
-                <a href="http://www.matf.bg.ac.rs/eng/">Faculty of Mathematics</a>{', '}
+                <a href="http://www.matf.bg.ac.rs/eng/">
+                  Faculty of Mathematics
+                </a>
+                {', '}
                 <a href="https://www.bg.ac.rs">University of Belgrade</a>
               </>
             }
