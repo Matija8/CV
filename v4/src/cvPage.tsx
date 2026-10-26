@@ -67,7 +67,6 @@ export function CvPage() {
               colleagues.
             </>
           }
-          marginTop="4px"
         />
 
         <WorkExpItem
@@ -124,7 +123,16 @@ export function CvPage() {
             </>
           }
         />
+      </section>
+    </A4Page>
+  );
 
+  const page2 = (
+    <A4Page>
+      <section
+        id="section-work-experience-continued"
+        style={{ marginTop: '2rem' }}
+      >
         <WorkExpItem
           logo={
             <img
@@ -145,14 +153,11 @@ export function CvPage() {
               Sunnyvale, CA.
             </>
           }
+          marginTop="0"
         />
       </section>
-    </A4Page>
-  );
 
-  const page2 = (
-    <A4Page>
-      <section id="section-education" style={{ marginTop: '2rem' }}>
+      <section id="section-education">
         <SectionTitle>Education</SectionTitle>
 
         <ItemWrapper marginTop="1rem">
