@@ -36,15 +36,12 @@ export function CvPage() {
           stack="React, TypeScript, Meteor, PostgreSQL, MongoDB, Claude.ai, Cursor"
           descr={
             <>
-              <p>
-                Working mostly on internal tools for the{' '}
-                <a href="https://compstak.com">CompStak</a> platform. Main
-                codebase I work on is a React + Meteor + MongoDB + PostgreSQL
-                based application.
-              </p>
+              Working mostly on internal tools for the{' '}
+              <a href="https://compstak.com">CompStak</a> platform. Main
+              codebase I work on is a React + Meteor + MongoDB + PostgreSQL
+              based application.
             </>
           }
-          marginTop="0"
         />
 
         <WorkExpItem
@@ -131,7 +128,7 @@ export function CvPage() {
     <A4Page>
       <section
         id="section-work-experience-continued"
-        style={{ marginTop: '2rem' }}
+        style={{ marginTop: '3rem' }}
       >
         <WorkExpItem
           logo={
@@ -157,7 +154,7 @@ export function CvPage() {
         />
       </section>
 
-      <section id="section-education">
+      <section id="section-education" style={{ marginTop: '3rem' }}>
         <SectionTitle>Education</SectionTitle>
 
         <ItemWrapper marginTop="1rem">
@@ -212,7 +209,7 @@ function CsLogo() {
 }
 
 function SectionTitle(props: ComponentProps<'h2'>) {
-  return <h2 style={{ margin: '1rem 0 2rem' }} {...props} />;
+  return <h2 style={{ margin: '2rem 0 2rem' }} {...props} />;
 }
 
 function LinksList() {
@@ -260,7 +257,7 @@ function WorkExpItem({
   duration,
   stack,
   descr,
-  marginTop: marginTop,
+  marginTop,
 }: {
   logo: ReactNode;
   title: string;
